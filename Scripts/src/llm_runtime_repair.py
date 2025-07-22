@@ -31,14 +31,30 @@ def remove_java_comments(java_code):
 
     return java_code_no_comments
 
+# def get_llm_prompt_by_src_code(src_code):
+#     prompt = f"""Given a piece of Java source code. Please analyze it to determine if JMH benchmark tests are needed. If necessary, generate the corresponding JMH benchmark code in throughput benchmark mode for performance measurement, embedding relevant knowledge and best practices for performance testing in the generated code.
+
+# Source Code:
+# {src_code}
+
+# Output instructions:
+# + If it's not necessary to generate JMH code, output SKIP with reasons
+# + If it's necessary to generate JMH code:
+#   - Do not add any explanation or commentary before or after the test code.
+#   - Wrap the entire code inside triple backticks like this:
+#   ```
+#   // your code here
+#   ```
+# """
+#     return prompt
 
 def get_llm_repair_prompt(code, err_msg):
-    prompt = f"""Fix the bug in JMH code according to the compilation message
+    prompt = f"""Fix the bug in JMH code according to the runtime exception
 
 JMH Code:
 {code}
 
-Comilation Message:
+Runtime Message:
 {err_msg}
 
 Output instructions:
@@ -49,7 +65,6 @@ Output instructions:
   ```
 """
     return prompt
-
 
 def generate_performance_tests(model: str, prompt: str) -> str:
     client = get_commercial_model(model)
