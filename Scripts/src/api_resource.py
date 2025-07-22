@@ -1,5 +1,0 @@
-deepseek_api_key="sk-5af38aeeba074a42ad3477aad32529da"
-openai_api=None
-# gemini_api="AIzaSyD32JerpsLNHOdz1QlTRPLRqS9drVOiOZM"
-gemini_api="AIzaSyDmbfaQ-tqMln124ps6OcQLYLHwtsNg1XA"
-anthropic_api_key=None
