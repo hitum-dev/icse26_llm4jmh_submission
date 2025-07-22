@@ -4,15 +4,15 @@ This project is a replication package for the paper titled "LLM4JMH: Studying th
 
 
 # Folders Overview
-    - Data: Contains data files for each three studied subjects and benchmark suites, including results for each RQ.
-    - Scripts: Includes Python and Bash scripts for:
-      - Generate JMH microbenchmarks from LLM (DeepSeek-V3).
-      - Analyzing and generating reports on code coverage using JaCoCo.
-      - Anaylyzing common methods benchmarked by all three benchmark suites.
-      - Performance Mutant Tools
-      - Analyzing the quality of JMH microbenchmarks, as indicators for domain specific selections
-      - Analyzing Bug Size and RCIW
-      - Script to replicate the Figures and Tables in the paper
+- Data: Contains data files for each three studied subjects and benchmark suites, including results for each RQ.
+- Scripts: Includes Python and Bash scripts for:
+  - Generate JMH microbenchmarks from LLM (DeepSeek-V3).
+  - Analyzing and generating reports on code coverage using JaCoCo.
+  - Anaylyzing common methods benchmarked by all three benchmark suites.
+  - Performance Mutant Tools
+  - Analyzing the quality of JMH microbenchmarks, as indicators for domain specific selections
+  - Analyzing Bug Size and RCIW
+  - Script to replicate the Figures and Tables in the paper
 
 # Prompt Template
 ## [Benchmark Generation] Analyze and Generate JMH Microbenchmark from Java Source Code
