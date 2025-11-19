@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.3" sequence="0" timestamp="1762904706285" analysisTimestamp="1762904799704" release="">
+  <Project projectName="">
+    <Jar>projects/zipkin/benchmarks/target/classes</Jar>
+    <Plugin id="de.heidelberg.pvs.diego.performance-tests-checker" enabled="true"/>
+  </Project>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="c12c3269a568374e656540a0550752a3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.EndpointBenchmarks.IPV4</LongMessage>
+    <Class classname="zipkin2.EndpointBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.EndpointBenchmarks" start="43" end="90" sourcefile="EndpointBenchmarks.java" sourcepath="zipkin2/EndpointBenchmarks.java">
+        <Message>At EndpointBenchmarks.java:[lines 43-90]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.EndpointBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.EndpointBenchmarks" name="IPV4" signature="Ljava/lang/String;" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.EndpointBenchmarks" sourcefile="EndpointBenchmarks.java" sourcepath="zipkin2/EndpointBenchmarks.java">
+        <Message>In EndpointBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.EndpointBenchmarks.IPV4</Message>
+    </Field>
+    <SourceLine classname="zipkin2.EndpointBenchmarks" sourcefile="EndpointBenchmarks.java" sourcepath="zipkin2/EndpointBenchmarks.java" synthetic="true">
+      <Message>In EndpointBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="1c7136b82fa85e325d16edee7c37fc6f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.EndpointBenchmarks.IPV6</LongMessage>
+    <Class classname="zipkin2.EndpointBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.EndpointBenchmarks" start="43" end="90" sourcefile="EndpointBenchmarks.java" sourcepath="zipkin2/EndpointBenchmarks.java">
+        <Message>At EndpointBenchmarks.java:[lines 43-90]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.EndpointBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.EndpointBenchmarks" name="IPV6" signature="Ljava/lang/String;" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.EndpointBenchmarks" sourcefile="EndpointBenchmarks.java" sourcepath="zipkin2/EndpointBenchmarks.java">
+        <Message>In EndpointBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.EndpointBenchmarks.IPV6</Message>
+    </Field>
+    <SourceLine classname="zipkin2.EndpointBenchmarks" sourcefile="EndpointBenchmarks.java" sourcepath="zipkin2/EndpointBenchmarks.java" synthetic="true">
+      <Message>In EndpointBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="6c6aa4a0a945217d48a358715d83af0e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.SpanBenchmarks.spanId</LongMessage>
+    <Class classname="zipkin2.SpanBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.SpanBenchmarks" start="47" end="171" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java">
+        <Message>At SpanBenchmarks.java:[lines 47-171]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.SpanBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.SpanBenchmarks" name="spanId" signature="J" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.SpanBenchmarks" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java">
+        <Message>In SpanBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.SpanBenchmarks.spanId</Message>
+    </Field>
+    <SourceLine classname="zipkin2.SpanBenchmarks" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java" synthetic="true">
+      <Message>In SpanBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="d1c1e54ab546c21a09aea03570fe8210" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.SpanBenchmarks.spanIdHex</LongMessage>
+    <Class classname="zipkin2.SpanBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.SpanBenchmarks" start="47" end="171" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java">
+        <Message>At SpanBenchmarks.java:[lines 47-171]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.SpanBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.SpanBenchmarks" name="spanIdHex" signature="Ljava/lang/String;" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.SpanBenchmarks" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java">
+        <Message>In SpanBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.SpanBenchmarks.spanIdHex</Message>
+    </Field>
+    <SourceLine classname="zipkin2.SpanBenchmarks" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java" synthetic="true">
+      <Message>In SpanBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="514e81eca90d3ded022d105c4f23f758" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.SpanBenchmarks.traceId</LongMessage>
+    <Class classname="zipkin2.SpanBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.SpanBenchmarks" start="47" end="171" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java">
+        <Message>At SpanBenchmarks.java:[lines 47-171]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.SpanBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.SpanBenchmarks" name="traceId" signature="J" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.SpanBenchmarks" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java">
+        <Message>In SpanBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.SpanBenchmarks.traceId</Message>
+    </Field>
+    <SourceLine classname="zipkin2.SpanBenchmarks" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java" synthetic="true">
+      <Message>In SpanBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="27c9060900964fbc0a64f556293b77fc" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.SpanBenchmarks.traceIdHex</LongMessage>
+    <Class classname="zipkin2.SpanBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.SpanBenchmarks" start="47" end="171" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java">
+        <Message>At SpanBenchmarks.java:[lines 47-171]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.SpanBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.SpanBenchmarks" name="traceIdHex" signature="Ljava/lang/String;" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.SpanBenchmarks" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java">
+        <Message>In SpanBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.SpanBenchmarks.traceIdHex</Message>
+    </Field>
+    <SourceLine classname="zipkin2.SpanBenchmarks" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java" synthetic="true">
+      <Message>In SpanBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="655b0b17345b5d835fd1d8eccd4ce3f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method buildClientSpan is called from constructor new zipkin2.SpanBenchmarks().</LongMessage>
+    <Class classname="zipkin2.SpanBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.SpanBenchmarks" start="47" end="171" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java">
+        <Message>At SpanBenchmarks.java:[lines 47-171]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.SpanBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.SpanBenchmarks" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.SpanBenchmarks" start="54" end="56" startBytecode="0" endBytecode="65" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java"/>
+      <Message>In method new zipkin2.SpanBenchmarks()</Message>
+    </Method>
+    <String value="buildClientSpan">
+      <Message>Value buildClientSpan</Message>
+    </String>
+    <SourceLine classname="zipkin2.SpanBenchmarks" primary="true" start="55" end="55" startBytecode="6" endBytecode="6" sourcefile="SpanBenchmarks.java" sourcepath="zipkin2/SpanBenchmarks.java">
+      <Message>At SpanBenchmarks.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="cc447fd37341db122f00c7561a57d64c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should zipkin2.codec.MoshiSpanDecoder$ByteBufferSource be a _static_ inner class?</LongMessage>
+    <Class classname="zipkin2.codec.MoshiSpanDecoder$ByteBufferSource" primary="true">
+      <SourceLine classname="zipkin2.codec.MoshiSpanDecoder$ByteBufferSource" start="70" end="93" sourcefile="MoshiSpanDecoder.java" sourcepath="zipkin2/codec/MoshiSpanDecoder.java">
+        <Message>At MoshiSpanDecoder.java:[lines 70-93]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.codec.MoshiSpanDecoder$ByteBufferSource</Message>
+    </Class>
+    <SourceLine classname="zipkin2.codec.MoshiSpanDecoder$ByteBufferSource" start="70" end="93" sourcefile="MoshiSpanDecoder.java" sourcepath="zipkin2/codec/MoshiSpanDecoder.java" synthetic="true">
+      <Message>At MoshiSpanDecoder.java:[lines 70-93]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="942004467d6b6ee06225c2a0274802e6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.collector.MetricsBenchmarks.LONG_SPAN</LongMessage>
+    <Class classname="zipkin2.collector.MetricsBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.collector.MetricsBenchmarks" start="43" end="94" sourcefile="MetricsBenchmarks.java" sourcepath="zipkin2/collector/MetricsBenchmarks.java">
+        <Message>At MetricsBenchmarks.java:[lines 43-94]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.collector.MetricsBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.collector.MetricsBenchmarks" name="LONG_SPAN" signature="I" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.collector.MetricsBenchmarks" sourcefile="MetricsBenchmarks.java" sourcepath="zipkin2/collector/MetricsBenchmarks.java">
+        <Message>In MetricsBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.collector.MetricsBenchmarks.LONG_SPAN</Message>
+    </Field>
+    <SourceLine classname="zipkin2.collector.MetricsBenchmarks" sourcefile="MetricsBenchmarks.java" sourcepath="zipkin2/collector/MetricsBenchmarks.java" synthetic="true">
+      <Message>In MetricsBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="252debce139ce10bad4d9571b8986242" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.collector.MetricsBenchmarks.MEDIUM_SPAN</LongMessage>
+    <Class classname="zipkin2.collector.MetricsBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.collector.MetricsBenchmarks" start="43" end="94" sourcefile="MetricsBenchmarks.java" sourcepath="zipkin2/collector/MetricsBenchmarks.java">
+        <Message>At MetricsBenchmarks.java:[lines 43-94]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.collector.MetricsBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.collector.MetricsBenchmarks" name="MEDIUM_SPAN" signature="I" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.collector.MetricsBenchmarks" sourcefile="MetricsBenchmarks.java" sourcepath="zipkin2/collector/MetricsBenchmarks.java">
+        <Message>In MetricsBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.collector.MetricsBenchmarks.MEDIUM_SPAN</Message>
+    </Field>
+    <SourceLine classname="zipkin2.collector.MetricsBenchmarks" sourcefile="MetricsBenchmarks.java" sourcepath="zipkin2/collector/MetricsBenchmarks.java" synthetic="true">
+      <Message>In MetricsBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="dc39d3f54436ba0a057fd4d80f0dc00a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.collector.MetricsBenchmarks.SHORT_SPAN</LongMessage>
+    <Class classname="zipkin2.collector.MetricsBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.collector.MetricsBenchmarks" start="43" end="94" sourcefile="MetricsBenchmarks.java" sourcepath="zipkin2/collector/MetricsBenchmarks.java">
+        <Message>At MetricsBenchmarks.java:[lines 43-94]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.collector.MetricsBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.collector.MetricsBenchmarks" name="SHORT_SPAN" signature="I" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.collector.MetricsBenchmarks" sourcefile="MetricsBenchmarks.java" sourcepath="zipkin2/collector/MetricsBenchmarks.java">
+        <Message>In MetricsBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.collector.MetricsBenchmarks.SHORT_SPAN</Message>
+    </Field>
+    <SourceLine classname="zipkin2.collector.MetricsBenchmarks" sourcefile="MetricsBenchmarks.java" sourcepath="zipkin2/collector/MetricsBenchmarks.java" synthetic="true">
+      <Message>In MetricsBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_IGNORED_STATIC_METHOD_RETURN" priority="2" rank="2" abbrev="JMHIGSRET" category="JMH" instanceHash="db29eec26ea542e56abd8c2c2842465d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Static method return not used or consumed by a Blackhole.</ShortMessage>
+    <LongMessage>Static method return not used or consumed in zipkin2.elasticsearch.internal.BulkRequestBenchmarks.buildAndWriteRequest_singleSpan()</LongMessage>
+    <Class classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="52" end="95" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+        <Message>At BulkRequestBenchmarks.java:[lines 52-95]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.elasticsearch.internal.BulkRequestBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" name="buildAndWriteRequest_singleSpan" signature="()Lcom/linecorp/armeria/common/HttpRequest;" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="68" end="73" startBytecode="0" endBytecode="161" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java"/>
+      <Message>In method zipkin2.elasticsearch.internal.BulkRequestBenchmarks.buildAndWriteRequest_singleSpan()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" primary="true" start="72" end="72" startBytecode="54" endBytecode="54" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+      <Message>At BulkRequestBenchmarks.java:[line 72]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_IGNORED_STATIC_METHOD_RETURN" priority="2" rank="2" abbrev="JMHIGSRET" category="JMH" instanceHash="55f98830d535a6589b46672ce70586b4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Static method return not used or consumed by a Blackhole.</ShortMessage>
+    <LongMessage>Static method return not used or consumed in zipkin2.elasticsearch.internal.BulkRequestBenchmarks.buildAndWriteRequest_tenSpans()</LongMessage>
+    <Class classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="52" end="95" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+        <Message>At BulkRequestBenchmarks.java:[lines 52-95]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.elasticsearch.internal.BulkRequestBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" name="buildAndWriteRequest_tenSpans" signature="()Lcom/linecorp/armeria/common/HttpRequest;" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="77" end="84" startBytecode="0" endBytecode="211" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java"/>
+      <Message>In method zipkin2.elasticsearch.internal.BulkRequestBenchmarks.buildAndWriteRequest_tenSpans()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" primary="true" start="83" end="83" startBytecode="68" endBytecode="68" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+      <Message>At BulkRequestBenchmarks.java:[line 83]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_LOOP_INSIDE_BENCHMARK" priority="2" rank="2" abbrev="JMHLOOP" category="JMH" instanceHash="5de3793512d63962ad459a6a77226e14" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Usage of loops in the JMH benchmark function.</ShortMessage>
+    <LongMessage>Usage of loops in the benchmark zipkin2.elasticsearch.internal.BulkRequestBenchmarks.buildAndWriteRequest_tenSpans()</LongMessage>
+    <Class classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="52" end="95" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+        <Message>At BulkRequestBenchmarks.java:[lines 52-95]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.elasticsearch.internal.BulkRequestBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" name="buildAndWriteRequest_tenSpans" signature="()Lcom/linecorp/armeria/common/HttpRequest;" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="77" end="84" startBytecode="0" endBytecode="211" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java"/>
+      <Message>In method zipkin2.elasticsearch.internal.BulkRequestBenchmarks.buildAndWriteRequest_tenSpans()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" primary="true" start="78" end="78" startBytecode="44" endBytecode="44" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+      <Message>At BulkRequestBenchmarks.java:[line 78]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_PRIMITIVE" priority="1" rank="1" abbrev="JMHSFP" category="JMH" instanceHash="e4441c0611c2953cb190a94980b27a3b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive field declared final.</ShortMessage>
+    <LongMessage>State field declared final in zipkin2.elasticsearch.internal.BulkRequestBenchmarks.indexTimestamp</LongMessage>
+    <Class classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="52" end="95" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+        <Message>At BulkRequestBenchmarks.java:[lines 52-95]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.elasticsearch.internal.BulkRequestBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" name="indexTimestamp" signature="J" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+        <Message>In BulkRequestBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.elasticsearch.internal.BulkRequestBenchmarks.indexTimestamp</Message>
+    </Field>
+    <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java" synthetic="true">
+      <Message>In BulkRequestBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_PRIMITIVE" priority="1" rank="1" abbrev="JMHSFP" category="JMH" instanceHash="6d5b785f6a9ec361aad5cee82f908772" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive field declared final.</ShortMessage>
+    <LongMessage>State field declared final in zipkin2.elasticsearch.internal.BulkRequestBenchmarks.spanIndex</LongMessage>
+    <Class classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="52" end="95" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+        <Message>At BulkRequestBenchmarks.java:[lines 52-95]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.elasticsearch.internal.BulkRequestBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" name="spanIndex" signature="Ljava/lang/String;" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+        <Message>In BulkRequestBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.elasticsearch.internal.BulkRequestBenchmarks.spanIndex</Message>
+    </Field>
+    <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java" synthetic="true">
+      <Message>In BulkRequestBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_UNSINKED_VARIABLE" priority="1" rank="1" abbrev="JMHUNSINKED" category="JMH" instanceHash="a9a391fb737203b157d8f3e03ea5d773" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unsinked variable inside benchmark method</ShortMessage>
+    <LongMessage>Unsinked variable inside benchmark method zipkin2.elasticsearch.internal.BulkRequestBenchmarks.buildAndWriteRequest_singleSpan() </LongMessage>
+    <Class classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="52" end="95" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+        <Message>At BulkRequestBenchmarks.java:[lines 52-95]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.elasticsearch.internal.BulkRequestBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" name="buildAndWriteRequest_singleSpan" signature="()Lcom/linecorp/armeria/common/HttpRequest;" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="68" end="73" startBytecode="0" endBytecode="161" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java"/>
+      <Message>In method zipkin2.elasticsearch.internal.BulkRequestBenchmarks.buildAndWriteRequest_singleSpan()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="68" end="73" startBytecode="0" endBytecode="161" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java" synthetic="true">
+      <Message>At BulkRequestBenchmarks.java:[lines 68-73]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_UNSINKED_VARIABLE" priority="1" rank="1" abbrev="JMHUNSINKED" category="JMH" instanceHash="cb62b8fbb31eaa9320844a04e49c11b2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unsinked variable inside benchmark method</ShortMessage>
+    <LongMessage>Unsinked variable inside benchmark method zipkin2.elasticsearch.internal.BulkRequestBenchmarks.buildAndWriteRequest_tenSpans() </LongMessage>
+    <Class classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="52" end="95" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java">
+        <Message>At BulkRequestBenchmarks.java:[lines 52-95]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.elasticsearch.internal.BulkRequestBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" name="buildAndWriteRequest_tenSpans" signature="()Lcom/linecorp/armeria/common/HttpRequest;" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="77" end="84" startBytecode="0" endBytecode="211" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java"/>
+      <Message>In method zipkin2.elasticsearch.internal.BulkRequestBenchmarks.buildAndWriteRequest_tenSpans()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" start="77" end="84" startBytecode="0" endBytecode="211" sourcefile="BulkRequestBenchmarks.java" sourcepath="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java" synthetic="true">
+      <Message>At BulkRequestBenchmarks.java:[lines 77-84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_UNSINKED_VARIABLE" priority="1" rank="1" abbrev="JMHUNSINKED" category="JMH" instanceHash="5b97f804248373bbbfa4a6ab5199a15b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unsinked variable inside benchmark method</ShortMessage>
+    <LongMessage>Unsinked variable inside benchmark method zipkin2.internal.ReadBufferBenchmarks.readLong() </LongMessage>
+    <Class classname="zipkin2.internal.ReadBufferBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="39" end="122" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java">
+        <Message>At ReadBufferBenchmarks.java:[lines 39-122]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.internal.ReadBufferBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.internal.ReadBufferBenchmarks" name="readLong" signature="()J" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="46" end="47" startBytecode="0" endBytecode="190" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java"/>
+      <Message>In method zipkin2.internal.ReadBufferBenchmarks.readLong()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="46" end="47" startBytecode="0" endBytecode="190" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java" synthetic="true">
+      <Message>At ReadBufferBenchmarks.java:[lines 46-47]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_UNSINKED_VARIABLE" priority="1" rank="1" abbrev="JMHUNSINKED" category="JMH" instanceHash="9ee8dbfb1784af36705d9eba61bece8b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unsinked variable inside benchmark method</ShortMessage>
+    <LongMessage>Unsinked variable inside benchmark method zipkin2.internal.ReadBufferBenchmarks.readLong_8arity() </LongMessage>
+    <Class classname="zipkin2.internal.ReadBufferBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="39" end="122" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java">
+        <Message>At ReadBufferBenchmarks.java:[lines 39-122]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.internal.ReadBufferBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.internal.ReadBufferBenchmarks" name="readLong_8arity" signature="()J" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="85" end="87" startBytecode="0" endBytecode="152" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java"/>
+      <Message>In method zipkin2.internal.ReadBufferBenchmarks.readLong_8arity()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="85" end="87" startBytecode="0" endBytecode="152" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java" synthetic="true">
+      <Message>At ReadBufferBenchmarks.java:[lines 85-87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_UNSINKED_VARIABLE" priority="1" rank="1" abbrev="JMHUNSINKED" category="JMH" instanceHash="d829478a5d1cbbc5504478f25e03a297" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unsinked variable inside benchmark method</ShortMessage>
+    <LongMessage>Unsinked variable inside benchmark method zipkin2.internal.ReadBufferBenchmarks.readLong_8arity_localArray() </LongMessage>
+    <Class classname="zipkin2.internal.ReadBufferBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="39" end="122" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java">
+        <Message>At ReadBufferBenchmarks.java:[lines 39-122]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.internal.ReadBufferBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.internal.ReadBufferBenchmarks" name="readLong_8arity_localArray" signature="()J" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="71" end="72" startBytecode="0" endBytecode="157" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java"/>
+      <Message>In method zipkin2.internal.ReadBufferBenchmarks.readLong_8arity_localArray()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="71" end="72" startBytecode="0" endBytecode="157" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java" synthetic="true">
+      <Message>At ReadBufferBenchmarks.java:[lines 71-72]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_UNSINKED_VARIABLE" priority="1" rank="1" abbrev="JMHUNSINKED" category="JMH" instanceHash="fa39aa87f481cb9c052a1d26e9d9889c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unsinked variable inside benchmark method</ShortMessage>
+    <LongMessage>Unsinked variable inside benchmark method zipkin2.internal.ReadBufferBenchmarks.readLong_localArray() </LongMessage>
+    <Class classname="zipkin2.internal.ReadBufferBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="39" end="122" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java">
+        <Message>At ReadBufferBenchmarks.java:[lines 39-122]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.internal.ReadBufferBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.internal.ReadBufferBenchmarks" name="readLong_localArray" signature="()J" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="58" end="60" startBytecode="0" endBytecode="185" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java"/>
+      <Message>In method zipkin2.internal.ReadBufferBenchmarks.readLong_localArray()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.internal.ReadBufferBenchmarks" start="58" end="60" startBytecode="0" endBytecode="185" sourcefile="ReadBufferBenchmarks.java" sourcepath="zipkin2/internal/ReadBufferBenchmarks.java" synthetic="true">
+      <Message>At ReadBufferBenchmarks.java:[lines 58-60]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="1407c79ab3c53f1241d0c06e6a0ecfcf" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.internal.WriteBufferBenchmarks.CHINESE_UTF8</LongMessage>
+    <Class classname="zipkin2.internal.WriteBufferBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" start="41" end="97" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java">
+        <Message>At WriteBufferBenchmarks.java:[lines 41-97]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.internal.WriteBufferBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.internal.WriteBufferBenchmarks" name="CHINESE_UTF8" signature="Ljava/lang/String;" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java">
+        <Message>In WriteBufferBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.internal.WriteBufferBenchmarks.CHINESE_UTF8</Message>
+    </Field>
+    <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java" synthetic="true">
+      <Message>In WriteBufferBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="9bed03ccedb5a9d17fbd16baa976e807" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.internal.WriteBufferBenchmarks.CHINESE_UTF8_SIZE</LongMessage>
+    <Class classname="zipkin2.internal.WriteBufferBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" start="41" end="97" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java">
+        <Message>At WriteBufferBenchmarks.java:[lines 41-97]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.internal.WriteBufferBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.internal.WriteBufferBenchmarks" name="CHINESE_UTF8_SIZE" signature="I" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java">
+        <Message>In WriteBufferBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.internal.WriteBufferBenchmarks.CHINESE_UTF8_SIZE</Message>
+    </Field>
+    <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java" synthetic="true">
+      <Message>In WriteBufferBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="a47a0b99cb4aca64ec4c596ef0457d11" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.internal.WriteBufferBenchmarks.TEST_INT</LongMessage>
+    <Class classname="zipkin2.internal.WriteBufferBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" start="41" end="97" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java">
+        <Message>At WriteBufferBenchmarks.java:[lines 41-97]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.internal.WriteBufferBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.internal.WriteBufferBenchmarks" name="TEST_INT" signature="I" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java">
+        <Message>In WriteBufferBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.internal.WriteBufferBenchmarks.TEST_INT</Message>
+    </Field>
+    <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java" synthetic="true">
+      <Message>In WriteBufferBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_STATE_FINAL_STATIC_PRIMITIVE" priority="3" rank="5" abbrev="JMHSFSP" category="JMH" instanceHash="1fb9146a5206ebac97d87b40e1535e84" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>JMH State primitive static field declared final.</ShortMessage>
+    <LongMessage>Static field declared final in zipkin2.internal.WriteBufferBenchmarks.TEST_LONG</LongMessage>
+    <Class classname="zipkin2.internal.WriteBufferBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" start="41" end="97" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java">
+        <Message>At WriteBufferBenchmarks.java:[lines 41-97]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.internal.WriteBufferBenchmarks</Message>
+    </Class>
+    <Field classname="zipkin2.internal.WriteBufferBenchmarks" name="TEST_LONG" signature="J" isStatic="true" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java">
+        <Message>In WriteBufferBenchmarks.java</Message>
+      </SourceLine>
+      <Message>Field zipkin2.internal.WriteBufferBenchmarks.TEST_LONG</Message>
+    </Field>
+    <SourceLine classname="zipkin2.internal.WriteBufferBenchmarks" sourcefile="WriteBufferBenchmarks.java" sourcepath="zipkin2/internal/WriteBufferBenchmarks.java" synthetic="true">
+      <Message>In WriteBufferBenchmarks.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_IGNORED_METHOD_RETURN" priority="3" rank="5" abbrev="JMHIGRET" category="JMH" instanceHash="eb9f31f1182c0e2895bca7398ef30ff7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method return not used or consumed by a Blackhole.</ShortMessage>
+    <LongMessage>Method return not used or consumed in zipkin2.server.internal.throttle.ThrottledCallBenchmarks.execute_overCapacity()</LongMessage>
+    <Class classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" start="45" end="130" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java">
+        <Message>At ThrottledCallBenchmarks.java:[lines 45-130]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.server.internal.throttle.ThrottledCallBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" name="execute_overCapacity" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" start="77" end="85" startBytecode="0" endBytecode="171" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java"/>
+      <Message>In method zipkin2.server.internal.throttle.ThrottledCallBenchmarks.execute_overCapacity()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" primary="true" start="81" end="81" startBytecode="23" endBytecode="23" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java">
+      <Message>At ThrottledCallBenchmarks.java:[line 81]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_IGNORED_METHOD_RETURN" priority="3" rank="5" abbrev="JMHIGRET" category="JMH" instanceHash="2f08f906f2c0664a176db635a4bcca19" instanceOccurrenceNum="0" instanceOccurrenceMax="1">
+    <ShortMessage>Method return not used or consumed by a Blackhole.</ShortMessage>
+    <LongMessage>Method return not used or consumed in zipkin2.server.internal.throttle.ThrottledCallBenchmarks.execute_throttled()</LongMessage>
+    <Class classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" start="45" end="130" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java">
+        <Message>At ThrottledCallBenchmarks.java:[lines 45-130]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.server.internal.throttle.ThrottledCallBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" name="execute_throttled" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" start="88" end="90" startBytecode="0" endBytecode="75" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java"/>
+      <Message>In method zipkin2.server.internal.throttle.ThrottledCallBenchmarks.execute_throttled()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" primary="true" start="88" end="88" startBytecode="8" endBytecode="8" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java">
+      <Message>At ThrottledCallBenchmarks.java:[line 88]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_IGNORED_METHOD_RETURN" priority="3" rank="5" abbrev="JMHIGRET" category="JMH" instanceHash="2f08f906f2c0664a176db635a4bcca19" instanceOccurrenceNum="1" instanceOccurrenceMax="1">
+    <ShortMessage>Method return not used or consumed by a Blackhole.</ShortMessage>
+    <LongMessage>Method return not used or consumed in zipkin2.server.internal.throttle.ThrottledCallBenchmarks.execute_throttled()</LongMessage>
+    <Class classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" start="45" end="130" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java">
+        <Message>At ThrottledCallBenchmarks.java:[lines 45-130]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.server.internal.throttle.ThrottledCallBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" name="execute_throttled" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" start="88" end="90" startBytecode="0" endBytecode="75" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java"/>
+      <Message>In method zipkin2.server.internal.throttle.ThrottledCallBenchmarks.execute_throttled()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" primary="true" start="89" end="89" startBytecode="21" endBytecode="21" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java">
+      <Message>At ThrottledCallBenchmarks.java:[line 89]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_LOOP_INSIDE_BENCHMARK" priority="2" rank="2" abbrev="JMHLOOP" category="JMH" instanceHash="dd8e2d91ccf523b66fc73fcdc233d6b5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Usage of loops in the JMH benchmark function.</ShortMessage>
+    <LongMessage>Usage of loops in the benchmark zipkin2.server.internal.throttle.ThrottledCallBenchmarks.execute_overCapacity()</LongMessage>
+    <Class classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" start="45" end="130" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java">
+        <Message>At ThrottledCallBenchmarks.java:[lines 45-130]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.server.internal.throttle.ThrottledCallBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" name="execute_overCapacity" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" start="77" end="85" startBytecode="0" endBytecode="171" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java"/>
+      <Message>In method zipkin2.server.internal.throttle.ThrottledCallBenchmarks.execute_overCapacity()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" primary="true" start="84" end="84" startBytecode="27" endBytecode="27" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java">
+      <Message>At ThrottledCallBenchmarks.java:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JMH_UNSINKED_VARIABLE" priority="1" rank="1" abbrev="JMHUNSINKED" category="JMH" instanceHash="e63fbe244c788702987f257ad4684ff" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unsinked variable inside benchmark method</ShortMessage>
+    <LongMessage>Unsinked variable inside benchmark method zipkin2.server.internal.throttle.ThrottledCallBenchmarks.execute_overCapacity() </LongMessage>
+    <Class classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" start="45" end="130" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java">
+        <Message>At ThrottledCallBenchmarks.java:[lines 45-130]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.server.internal.throttle.ThrottledCallBenchmarks</Message>
+    </Class>
+    <Method classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" name="execute_overCapacity" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.openjdk.jmh.annotations.Measurement,org.openjdk.jmh.annotations.Warmup,org.openjdk.jmh.annotations.Fork,org.openjdk.jmh.annotations.BenchmarkMode,org.openjdk.jmh.annotations.OutputTimeUnit,org.openjdk.jmh.annotations.State,org.openjdk.jmh.annotations.Threads">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" start="77" end="85" startBytecode="0" endBytecode="171" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java"/>
+      <Message>In method zipkin2.server.internal.throttle.ThrottledCallBenchmarks.execute_overCapacity()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" start="77" end="85" startBytecode="0" endBytecode="171" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java" synthetic="true">
+      <Message>At ThrottledCallBenchmarks.java:[lines 77-85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE" priority="1" rank="14" abbrev="CN" category="BAD_PRACTICE" instanceHash="d29064b8504033e46e80e01ca9206caf" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="580">
+    <ShortMessage>Class defines clone() but doesn&apos;t implement Cloneable</ShortMessage>
+    <LongMessage>zipkin2.server.internal.throttle.ThrottledCallBenchmarks$FakeCall defines clone() but doesn&apos;t implement Cloneable</LongMessage>
+    <Class classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks$FakeCall" primary="true">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks$FakeCall" start="94" end="118" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java">
+        <Message>At ThrottledCallBenchmarks.java:[lines 94-118]</Message>
+      </SourceLine>
+      <Message>In class zipkin2.server.internal.throttle.ThrottledCallBenchmarks$FakeCall</Message>
+    </Class>
+    <Method classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks$FakeCall" name="clone" signature="()Lzipkin2/server/internal/throttle/ThrottledCallBenchmarks$FakeCall;" isStatic="false" primary="true">
+      <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks$FakeCall" start="118" end="118" startBytecode="0" endBytecode="53" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java"/>
+      <Message>In method zipkin2.server.internal.throttle.ThrottledCallBenchmarks$FakeCall.clone()</Message>
+    </Method>
+    <SourceLine classname="zipkin2.server.internal.throttle.ThrottledCallBenchmarks$FakeCall" start="118" end="118" startBytecode="0" endBytecode="53" sourcefile="ThrottledCallBenchmarks.java" sourcepath="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java" synthetic="true">
+      <Message>At ThrottledCallBenchmarks.java:[line 118]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="JMH">
+    <Description>JMH</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugPattern type="JMH_STATE_FINAL_STATIC_PRIMITIVE" abbrev="JMHSFSP" category="JMH">
+    <ShortDescription>JMH State primitive static field declared final.</ShortDescription>
+    <Details><![CDATA[
+
+<p>Final primitive fields pose a threat to benchmark measurements
+as it gives the compiler the possibility of applying the
+constant-folding. If JVM realizes the result of the computation is the
+same no matter what, it can cleverly optimize it. In the case of a JMH benchmark, that means
+it can move the computation outside of the internal JMH loop.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="JMH_STATE_FINAL_PRIMITIVE" abbrev="JMHSFP" category="JMH">
+    <ShortDescription>JMH State primitive field declared final.</ShortDescription>
+    <Details><![CDATA[
+
+<p>Final primitive fields pose a threat to benchmark measurements
+as it gives the compiler the possibility of applying the
+constant-folding. If JVM realizes the result of the computation is the
+same no matter what, it can cleverly optimize it. In the case of a JMH benchmark, that means
+it can move the computation outside of the internal JMH loop.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="JMH_IGNORED_STATIC_METHOD_RETURN" abbrev="JMHIGSRET" category="JMH">
+    <ShortDescription>Static method return not used or consumed by a Blackhole.</ShortDescription>
+    <Details><![CDATA[
+
+<p>Each static non-void method call should have its return either used in the benchmark or consumed 
+by a Blackhole to avoid dead-code optimization.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Should be a static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+   made static.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" abbrev="MC" category="MALICIOUS_CODE">
+    <ShortDescription>An overridable method is called from a constructor</ShortDescription>
+    <Details><![CDATA[
+      <p>
+      Calling an overridable method during in a constructor may result in the use of uninitialized data. It may also
+      leak the this reference of the partially constructed object. Only static, final or private methods should be
+      invoked from a constructor.</p>
+      <p>
+      See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/MET05-J.+Ensure+that+constructors+do+not+call+overridable+methods">MET05-J. Ensure that constructors do not call overridable methods</a>.
+      </p>
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="JMH_IGNORED_METHOD_RETURN" abbrev="JMHIGRET" category="JMH">
+    <ShortDescription>Method return not used or consumed by a Blackhole.</ShortDescription>
+    <Details><![CDATA[
+
+<p>Each non-void method call should have its return either used in the benchmark or consumed 
+by a Blackhole to avoid	dead-code optimization.</p>
+
+		]]></Details>
+  </BugPattern>
+  <BugPattern type="JMH_LOOP_INSIDE_BENCHMARK" abbrev="JMHLOOP" category="JMH">
+    <ShortDescription>Usage of loops in the JMH benchmark function.</ShortDescription>
+    <Details><![CDATA[
+
+<p>Looping is done in the hope of minimizing the overhead of calling the test method, by doing the operations inside
+the loop instead of inside the method call. This is a dangerous setting for a micro-benchmark.
+The compiler can automagically apply some optimizations to merge the loop iterations.</p>
+
+		]]></Details>
+  </BugPattern>
+  <BugPattern type="JMH_UNSINKED_VARIABLE" abbrev="JMHUNSINKED" category="JMH">
+    <ShortDescription>Unsinked variable inside benchmark method</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE" abbrev="CN" category="BAD_PRACTICE">
+    <ShortDescription>Class defines clone() but doesn&apos;t implement Cloneable</ShortDescription>
+    <Details><![CDATA[
+
+<p> This class defines a clone() method but the class doesn't implement Cloneable.
+There are some situations in which this is OK (e.g., you want to control how subclasses
+can clone themselves), but just make sure that this is what you intended.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="JMHIGSRET">
+    <Description>Static method return not used or consumed by a Blackhole</Description>
+  </BugCode>
+  <BugCode abbrev="JMHLOOP">
+    <Description>Usage of loops in the JMH benchmark function</Description>
+  </BugCode>
+  <BugCode abbrev="MC">
+    <Description>Dangerous call to overridable method</Description>
+  </BugCode>
+  <BugCode abbrev="JMHUNSINKED">
+    <Description>Unsinked variable inside benchmark method</Description>
+  </BugCode>
+  <BugCode abbrev="JMHIGRET">
+    <Description>Method return not used or consumed by a Blackhole</Description>
+  </BugCode>
+  <BugCode abbrev="JMHSFSP">
+    <Description>JMH State primitive static field declared final</Description>
+  </BugCode>
+  <BugCode abbrev="CN" cweid="580">
+    <Description>Bad implementation of cloneable idiom</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="JMHSFP">
+    <Description>JMH State primitive field declared final</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="111">
+    <MissingClass>com.esotericsoftware.kryo.Kryo</MissingClass>
+    <MissingClass>com.esotericsoftware.kryo.Registration</MissingClass>
+    <MissingClass>com.esotericsoftware.kryo.Serializer</MissingClass>
+    <MissingClass>com.esotericsoftware.kryo.io.Input</MissingClass>
+    <MissingClass>com.esotericsoftware.kryo.io.Output</MissingClass>
+    <MissingClass>com.esotericsoftware.kryo.serializers.JavaSerializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonFactory</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonParser</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonToken</MissingClass>
+    <MissingClass>com.google.protobuf.CodedInputStream</MissingClass>
+    <MissingClass>com.google.protobuf.WireFormat</MissingClass>
+    <MissingClass>com.linecorp.armeria.common.HttpRequest</MissingClass>
+    <MissingClass>com.linecorp.armeria.common.RequestHeaders</MissingClass>
+    <MissingClass>com.linecorp.armeria.common.metric.NoopMeterRegistry</MissingClass>
+    <MissingClass>com.linecorp.armeria.common.stream.StreamWriter</MissingClass>
+    <MissingClass>com.netflix.concurrency.limits.Limit</MissingClass>
+    <MissingClass>com.netflix.concurrency.limits.Limiter</MissingClass>
+    <MissingClass>com.netflix.concurrency.limits.limit.FixedLimit</MissingClass>
+    <MissingClass>com.netflix.concurrency.limits.limiter.AbstractLimiter</MissingClass>
+    <MissingClass>com.netflix.concurrency.limits.limiter.AbstractLimiter$Builder</MissingClass>
+    <MissingClass>com.netflix.concurrency.limits.limiter.SimpleLimiter</MissingClass>
+    <MissingClass>com.netflix.concurrency.limits.limiter.SimpleLimiter$Builder</MissingClass>
+    <MissingClass>com.squareup.moshi.JsonAdapter</MissingClass>
+    <MissingClass>com.squareup.moshi.JsonReader</MissingClass>
+    <MissingClass>com.squareup.moshi.JsonReader$Token</MissingClass>
+    <MissingClass>com.squareup.moshi.JsonWriter</MissingClass>
+    <MissingClass>com.squareup.moshi.Moshi</MissingClass>
+    <MissingClass>com.squareup.moshi.Moshi$Builder</MissingClass>
+    <MissingClass>com.squareup.moshi.Types</MissingClass>
+    <MissingClass>com.squareup.wire.EnumAdapter</MissingClass>
+    <MissingClass>com.squareup.wire.FieldEncoding</MissingClass>
+    <MissingClass>com.squareup.wire.Message</MissingClass>
+    <MissingClass>com.squareup.wire.Message$Builder</MissingClass>
+    <MissingClass>com.squareup.wire.ProtoAdapter</MissingClass>
+    <MissingClass>com.squareup.wire.ProtoAdapter$EnumConstantNotFoundException</MissingClass>
+    <MissingClass>com.squareup.wire.ProtoReader</MissingClass>
+    <MissingClass>com.squareup.wire.ProtoWriter</MissingClass>
+    <MissingClass>com.squareup.wire.WireEnum</MissingClass>
+    <MissingClass>com.squareup.wire.WireField</MissingClass>
+    <MissingClass>com.squareup.wire.WireField$Label</MissingClass>
+    <MissingClass>com.squareup.wire.internal.Internal</MissingClass>
+    <MissingClass>io.micrometer.core.instrument.MeterRegistry</MissingClass>
+    <MissingClass>io.micrometer.prometheus.PrometheusConfig</MissingClass>
+    <MissingClass>io.micrometer.prometheus.PrometheusMeterRegistry</MissingClass>
+    <MissingClass>io.netty.buffer.ByteBuf</MissingClass>
+    <MissingClass>io.netty.buffer.ByteBufAllocator</MissingClass>
+    <MissingClass>io.netty.buffer.PooledByteBufAllocator</MissingClass>
+    <MissingClass>okio.Buffer</MissingClass>
+    <MissingClass>okio.Buffer$UnsafeCursor</MissingClass>
+    <MissingClass>okio.BufferedSource</MissingClass>
+    <MissingClass>okio.ByteString</MissingClass>
+    <MissingClass>okio.Okio</MissingClass>
+    <MissingClass>okio.Source</MissingClass>
+    <MissingClass>okio.Timeout</MissingClass>
+    <MissingClass>org.openjdk.jmh.infra.BenchmarkParams</MissingClass>
+    <MissingClass>org.openjdk.jmh.infra.Blackhole</MissingClass>
+    <MissingClass>org.openjdk.jmh.infra.Control</MissingClass>
+    <MissingClass>org.openjdk.jmh.infra.IterationParams</MissingClass>
+    <MissingClass>org.openjdk.jmh.infra.ThreadParams</MissingClass>
+    <MissingClass>org.openjdk.jmh.profile.IntervalThroughputProfiler</MissingClass>
+    <MissingClass>org.openjdk.jmh.profile.IntervalThroughputProfiler$IntervalOps</MissingClass>
+    <MissingClass>org.openjdk.jmh.results.AverageTimeResult</MissingClass>
+    <MissingClass>org.openjdk.jmh.results.BenchmarkTaskResult</MissingClass>
+    <MissingClass>org.openjdk.jmh.results.RawResults</MissingClass>
+    <MissingClass>org.openjdk.jmh.results.Result</MissingClass>
+    <MissingClass>org.openjdk.jmh.results.ResultRole</MissingClass>
+    <MissingClass>org.openjdk.jmh.results.SampleTimeResult</MissingClass>
+    <MissingClass>org.openjdk.jmh.results.SingleShotResult</MissingClass>
+    <MissingClass>org.openjdk.jmh.results.ThroughputResult</MissingClass>
+    <MissingClass>org.openjdk.jmh.runner.FailureAssistException</MissingClass>
+    <MissingClass>org.openjdk.jmh.runner.InfraControl</MissingClass>
+    <MissingClass>org.openjdk.jmh.runner.Runner</MissingClass>
+    <MissingClass>org.openjdk.jmh.runner.RunnerException</MissingClass>
+    <MissingClass>org.openjdk.jmh.runner.options.ChainedOptionsBuilder</MissingClass>
+    <MissingClass>org.openjdk.jmh.runner.options.Options</MissingClass>
+    <MissingClass>org.openjdk.jmh.runner.options.OptionsBuilder</MissingClass>
+    <MissingClass>org.openjdk.jmh.util.SampleBuffer</MissingClass>
+    <MissingClass>zipkin2.Annotation</MissingClass>
+    <MissingClass>zipkin2.Call</MissingClass>
+    <MissingClass>zipkin2.Call$Base</MissingClass>
+    <MissingClass>zipkin2.Callback</MissingClass>
+    <MissingClass>zipkin2.Endpoint</MissingClass>
+    <MissingClass>zipkin2.Endpoint$Builder</MissingClass>
+    <MissingClass>zipkin2.Span</MissingClass>
+    <MissingClass>zipkin2.Span$Builder</MissingClass>
+    <MissingClass>zipkin2.Span$Kind</MissingClass>
+    <MissingClass>zipkin2.codec.SpanBytesDecoder</MissingClass>
+    <MissingClass>zipkin2.codec.SpanBytesEncoder</MissingClass>
+    <MissingClass>zipkin2.collector.CollectorMetrics</MissingClass>
+    <MissingClass>zipkin2.collector.InMemoryCollectorMetrics</MissingClass>
+    <MissingClass>zipkin2.elasticsearch.ElasticsearchStorage</MissingClass>
+    <MissingClass>zipkin2.elasticsearch.ElasticsearchStorage$Builder</MissingClass>
+    <MissingClass>zipkin2.elasticsearch.ElasticsearchStorage$LazyHttpClient</MissingClass>
+    <MissingClass>zipkin2.elasticsearch.ElasticsearchVersion</MissingClass>
+    <MissingClass>zipkin2.elasticsearch.internal.BulkCallBuilder</MissingClass>
+    <MissingClass>zipkin2.elasticsearch.internal.BulkCallBuilder$IndexEntry</MissingClass>
+    <MissingClass>zipkin2.elasticsearch.internal.BulkIndexWriter</MissingClass>
+    <MissingClass>zipkin2.elasticsearch.internal.IndexNameFormatter</MissingClass>
+    <MissingClass>zipkin2.elasticsearch.internal.client.HttpCall</MissingClass>
+    <MissingClass>zipkin2.elasticsearch.internal.client.HttpCall$RequestStream</MissingClass>
+    <MissingClass>zipkin2.elasticsearch.internal.client.HttpCall$RequestSupplier</MissingClass>
+    <MissingClass>zipkin2.internal.DelayLimiter</MissingClass>
+    <MissingClass>zipkin2.internal.DelayLimiter$Builder</MissingClass>
+    <MissingClass>zipkin2.internal.HexCodec</MissingClass>
+    <MissingClass>zipkin2.internal.ReadBuffer</MissingClass>
+    <MissingClass>zipkin2.internal.RecyclableBuffers</MissingClass>
+    <MissingClass>zipkin2.internal.WriteBuffer</MissingClass>
+    <MissingClass>zipkin2.server.internal.MicrometerCollectorMetrics</MissingClass>
+    <MissingClass>zipkin2.server.internal.throttle.LimiterMetrics</MissingClass>
+    <MissingClass>zipkin2.server.internal.throttle.ThrottledCall</MissingClass>
+    <MissingClass>zipkin2.storage.cassandra.internal.Resources</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Nov 2025 23:45:06 +0000" total_classes="154" referenced_classes="224" total_bugs="34" total_size="43170" num_packages="13" java_version="21.0.8" vm_version="21.0.8+9-Ubuntu-0ubuntu124.04.1" cpu_seconds="102.62" clock_seconds="7.90" peak_mbytes="892.94" alloc_mbytes="2048.00" gc_seconds="0.21" priority_3="17" priority_2="5" priority_1="12">
+    <FileStats path="zipkin2/EndpointBenchmarks.java" bugCount="2" size="35" bugHash="453fa22bcfd5d72ac127e3f2f589a108"/>
+    <FileStats path="zipkin2/SpanBenchmarks.java" bugCount="5" size="90" bugHash="650ccb076e5b5cbecee8ee7f3ff497cc"/>
+    <FileStats path="zipkin2/codec/CodecBenchmarks.java" bugCount="0" size="71"/>
+    <FileStats path="zipkin2/codec/JacksonSpanDecoder.java" bugCount="0" size="131"/>
+    <FileStats path="zipkin2/codec/JsonCodecBenchmarks.java" bugCount="0" size="41"/>
+    <FileStats path="zipkin2/codec/MoshiSpanDecoder.java" bugCount="1" size="161" bugHash="f0b75b403ad8aae6fa2a96277b4f5630"/>
+    <FileStats path="zipkin2/codec/ProtoCodecBenchmarks.java" bugCount="0" size="39"/>
+    <FileStats path="zipkin2/codec/ProtobufSpanDecoder.java" bugCount="0" size="157"/>
+    <FileStats path="zipkin2/codec/WireSpanDecoder.java" bugCount="0" size="160"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_jmhType.java" bugCount="0" size="3"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_jmhType_B1.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_jmhType_B2.java" bugCount="0" size="22"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_jmhType_B3.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_readChineseSpan_JSON_V1_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_readChineseSpan_JSON_V2_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_readChineseSpan_PROTO3_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_readChineseSpan_THRIFT_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_readClientSpan_JSON_V1_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_readClientSpan_JSON_V2_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_readClientSpan_PROTO3_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_readClientSpan_THRIFT_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_readTenClientSpans_JSON_V2_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_writeChineseSpan_JSON_V1_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_writeChineseSpan_JSON_V2_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_writeChineseSpan_PROTO3_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_writeChineseSpan_THRIFT_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_writeClientSpan_JSON_V1_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_writeClientSpan_JSON_V2_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_writeClientSpan_PROTO3_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_writeClientSpan_THRIFT_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/CodecBenchmarks_writeTenClientSpans_JSON_V2_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/codec/jmh_generated/JsonCodecBenchmarks_bytebuffer_jacksonDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/JsonCodecBenchmarks_bytebuffer_moshiDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/JsonCodecBenchmarks_bytebuffer_zipkinDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/JsonCodecBenchmarks_bytes_jacksonDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/JsonCodecBenchmarks_bytes_moshiDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/JsonCodecBenchmarks_bytes_zipkinDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/JsonCodecBenchmarks_jmhType.java" bugCount="0" size="3"/>
+    <FileStats path="zipkin2/codec/jmh_generated/JsonCodecBenchmarks_jmhType_B1.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/codec/jmh_generated/JsonCodecBenchmarks_jmhType_B2.java" bugCount="0" size="22"/>
+    <FileStats path="zipkin2/codec/jmh_generated/JsonCodecBenchmarks_jmhType_B3.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/codec/jmh_generated/ProtoCodecBenchmarks_bytebuffer_protobufDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/ProtoCodecBenchmarks_bytebuffer_wireDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/ProtoCodecBenchmarks_bytebuffer_zipkinDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/ProtoCodecBenchmarks_bytes_protobufDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/ProtoCodecBenchmarks_bytes_wireDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/ProtoCodecBenchmarks_bytes_zipkinDecoder_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/codec/jmh_generated/ProtoCodecBenchmarks_jmhType.java" bugCount="0" size="3"/>
+    <FileStats path="zipkin2/codec/jmh_generated/ProtoCodecBenchmarks_jmhType_B1.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/codec/jmh_generated/ProtoCodecBenchmarks_jmhType_B2.java" bugCount="0" size="22"/>
+    <FileStats path="zipkin2/codec/jmh_generated/ProtoCodecBenchmarks_jmhType_B3.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/collector/MetricsBenchmarks.java" bugCount="3" size="34" bugHash="f872045a1fc1a521bda4c6b1d2ae29a6"/>
+    <FileStats path="zipkin2/collector/jmh_generated/MetricsBenchmarks_incrementBytes_longSpans_Actuate_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/collector/jmh_generated/MetricsBenchmarks_incrementBytes_longSpans_inMemory_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/collector/jmh_generated/MetricsBenchmarks_incrementBytes_mediumSpans_Actuate_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/collector/jmh_generated/MetricsBenchmarks_incrementBytes_mediumSpans_inMemory_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/collector/jmh_generated/MetricsBenchmarks_incrementBytes_shortSpans_Actuate_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/collector/jmh_generated/MetricsBenchmarks_incrementBytes_shortSpans_inMemory_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/collector/jmh_generated/MetricsBenchmarks_jmhType.java" bugCount="0" size="3"/>
+    <FileStats path="zipkin2/collector/jmh_generated/MetricsBenchmarks_jmhType_B1.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/collector/jmh_generated/MetricsBenchmarks_jmhType_B2.java" bugCount="0" size="22"/>
+    <FileStats path="zipkin2/collector/jmh_generated/MetricsBenchmarks_jmhType_B3.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/elasticsearch/internal/BulkRequestBenchmarks.java" bugCount="7" size="42" bugHash="3ed7f4cd4e11bbd20b5b5e9ea0ce21ce"/>
+    <FileStats path="zipkin2/elasticsearch/internal/jmh_generated/BulkRequestBenchmarks_buildAndWriteRequest_singleSpan_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/elasticsearch/internal/jmh_generated/BulkRequestBenchmarks_buildAndWriteRequest_tenSpans_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/elasticsearch/internal/jmh_generated/BulkRequestBenchmarks_jmhType.java" bugCount="0" size="3"/>
+    <FileStats path="zipkin2/elasticsearch/internal/jmh_generated/BulkRequestBenchmarks_jmhType_B1.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/elasticsearch/internal/jmh_generated/BulkRequestBenchmarks_jmhType_B2.java" bugCount="0" size="22"/>
+    <FileStats path="zipkin2/elasticsearch/internal/jmh_generated/BulkRequestBenchmarks_jmhType_B3.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/elasticsearch/internal/jmh_generated/BulkRequestBenchmarks_writeRequest_singleSpan_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/DelayLimiterBenchmarks.java" bugCount="0" size="21"/>
+    <FileStats path="zipkin2/internal/ReadBufferBenchmarks.java" bugCount="4" size="30" bugHash="79fe034ff75868ffa948a9fb077c360f"/>
+    <FileStats path="zipkin2/internal/WriteBufferBenchmarks.java" bugCount="4" size="42" bugHash="e36d227bc1aa4abcf441bd63901dd2de"/>
+    <FileStats path="zipkin2/internal/jmh_generated/DelayLimiterBenchmarks_jmhType.java" bugCount="0" size="3"/>
+    <FileStats path="zipkin2/internal/jmh_generated/DelayLimiterBenchmarks_jmhType_B1.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/internal/jmh_generated/DelayLimiterBenchmarks_jmhType_B2.java" bugCount="0" size="22"/>
+    <FileStats path="zipkin2/internal/jmh_generated/DelayLimiterBenchmarks_jmhType_B3.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/internal/jmh_generated/DelayLimiterBenchmarks_shouldInvoke_randomData_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/DelayLimiterBenchmarks_shouldInvoke_sameData_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/ReadBufferBenchmarks_jmhType.java" bugCount="0" size="3"/>
+    <FileStats path="zipkin2/internal/jmh_generated/ReadBufferBenchmarks_jmhType_B1.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/internal/jmh_generated/ReadBufferBenchmarks_jmhType_B2.java" bugCount="0" size="22"/>
+    <FileStats path="zipkin2/internal/jmh_generated/ReadBufferBenchmarks_jmhType_B3.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/internal/jmh_generated/ReadBufferBenchmarks_readLongReverseBytes_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/ReadBufferBenchmarks_readLong_8arity_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/ReadBufferBenchmarks_readLong_8arity_localArray_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/ReadBufferBenchmarks_readLong_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/ReadBufferBenchmarks_readLong_localArray_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_jmhType.java" bugCount="0" size="3"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_jmhType_B1.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_jmhType_B2.java" bugCount="0" size="22"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_jmhType_B3.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_utf8SizeInBytes_chinese_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_varIntSizeInBytes_32_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_varIntSizeInBytes_64_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_writeLongLe_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_writeUtf8_chinese_jdk_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_writeUtf8_chinese_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_writeVarint_32_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/internal/jmh_generated/WriteBufferBenchmarks_writeVarint_64_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/EndpointBenchmarks_jmhType.java" bugCount="0" size="3"/>
+    <FileStats path="zipkin2/jmh_generated/EndpointBenchmarks_jmhType_B1.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/jmh_generated/EndpointBenchmarks_jmhType_B2.java" bugCount="0" size="22"/>
+    <FileStats path="zipkin2/jmh_generated/EndpointBenchmarks_jmhType_B3.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/jmh_generated/EndpointBenchmarks_parseIpv4_addr_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/EndpointBenchmarks_parseIpv4_bytes_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/EndpointBenchmarks_parseIpv4_literal_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/EndpointBenchmarks_parseIpv6_addr_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/EndpointBenchmarks_parseIpv6_bytes_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/EndpointBenchmarks_parseIpv6_literal_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_buildClientSpan_clear_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_buildClientSpan_clone_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_buildClientSpan_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_buildClientSpan_longs_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_deserialize_kryo_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_jmhType.java" bugCount="0" size="3"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_jmhType_B1.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_jmhType_B2.java" bugCount="0" size="22"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_jmhType_B3.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_padLeft_15Chars_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_padLeft_17Chars_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_padLeft_1Char_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_padLeft_31Chars_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/jmh_generated/SpanBenchmarks_serialize_kryo_jmhTest.java" bugCount="0" size="484"/>
+    <FileStats path="zipkin2/proto3/Annotation.java" bugCount="0" size="94"/>
+    <FileStats path="zipkin2/proto3/Endpoint.java" bugCount="0" size="124"/>
+    <FileStats path="zipkin2/proto3/ListOfSpans.java" bugCount="0" size="81"/>
+    <FileStats path="zipkin2/proto3/ReportResponse.java" bugCount="0" size="61"/>
+    <FileStats path="zipkin2/proto3/Span.java" bugCount="0" size="305"/>
+    <FileStats path="zipkin2/server/internal/throttle/ThrottledCallBenchmarks.java" bugCount="6" size="71" bugHash="1433cf11c45b2cb4dad1b78f70860bb0"/>
+    <FileStats path="zipkin2/server/internal/throttle/jmh_generated/ThrottledCallBenchmarks_execute_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/server/internal/throttle/jmh_generated/ThrottledCallBenchmarks_execute_overCapacity_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/server/internal/throttle/jmh_generated/ThrottledCallBenchmarks_execute_throttled_jmhTest.java" bugCount="0" size="489"/>
+    <FileStats path="zipkin2/server/internal/throttle/jmh_generated/ThrottledCallBenchmarks_jmhType.java" bugCount="0" size="3"/>
+    <FileStats path="zipkin2/server/internal/throttle/jmh_generated/ThrottledCallBenchmarks_jmhType_B1.java" bugCount="0" size="259"/>
+    <FileStats path="zipkin2/server/internal/throttle/jmh_generated/ThrottledCallBenchmarks_jmhType_B2.java" bugCount="0" size="22"/>
+    <FileStats path="zipkin2/server/internal/throttle/jmh_generated/ThrottledCallBenchmarks_jmhType_B3.java" bugCount="0" size="259"/>
+    <PackageStats package="zipkin2" total_bugs="7" total_types="2" total_size="125" priority_3="7">
+      <ClassStats class="zipkin2.EndpointBenchmarks" sourceFile="EndpointBenchmarks.java" interface="false" size="35" bugs="2" priority_3="2"/>
+      <ClassStats class="zipkin2.SpanBenchmarks" sourceFile="SpanBenchmarks.java" interface="false" size="90" bugs="5" priority_3="5"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.codec" total_bugs="1" total_types="11" total_size="760" priority_2="1">
+      <ClassStats class="zipkin2.codec.CodecBenchmarks" sourceFile="CodecBenchmarks.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="zipkin2.codec.JacksonSpanDecoder" sourceFile="JacksonSpanDecoder.java" interface="false" size="131" bugs="0"/>
+      <ClassStats class="zipkin2.codec.JsonCodecBenchmarks" sourceFile="JsonCodecBenchmarks.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="zipkin2.codec.MoshiSpanDecoder" sourceFile="MoshiSpanDecoder.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="zipkin2.codec.MoshiSpanDecoder$1" sourceFile="MoshiSpanDecoder.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="zipkin2.codec.MoshiSpanDecoder$2" sourceFile="MoshiSpanDecoder.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.codec.MoshiSpanDecoder$3" sourceFile="MoshiSpanDecoder.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="zipkin2.codec.MoshiSpanDecoder$ByteBufferSource" sourceFile="MoshiSpanDecoder.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="zipkin2.codec.ProtoCodecBenchmarks" sourceFile="ProtoCodecBenchmarks.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="zipkin2.codec.ProtobufSpanDecoder" sourceFile="ProtobufSpanDecoder.java" interface="false" size="157" bugs="0"/>
+      <ClassStats class="zipkin2.codec.WireSpanDecoder" sourceFile="WireSpanDecoder.java" interface="false" size="160" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.codec.jmh_generated" total_bugs="0" total_types="42" total_size="16209">
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_jmhType" sourceFile="CodecBenchmarks_jmhType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_jmhType_B1" sourceFile="CodecBenchmarks_jmhType_B1.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_jmhType_B2" sourceFile="CodecBenchmarks_jmhType_B2.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_jmhType_B3" sourceFile="CodecBenchmarks_jmhType_B3.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_readChineseSpan_JSON_V1_jmhTest" sourceFile="CodecBenchmarks_readChineseSpan_JSON_V1_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_readChineseSpan_JSON_V2_jmhTest" sourceFile="CodecBenchmarks_readChineseSpan_JSON_V2_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_readChineseSpan_PROTO3_jmhTest" sourceFile="CodecBenchmarks_readChineseSpan_PROTO3_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_readChineseSpan_THRIFT_jmhTest" sourceFile="CodecBenchmarks_readChineseSpan_THRIFT_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_readClientSpan_JSON_V1_jmhTest" sourceFile="CodecBenchmarks_readClientSpan_JSON_V1_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_readClientSpan_JSON_V2_jmhTest" sourceFile="CodecBenchmarks_readClientSpan_JSON_V2_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_readClientSpan_PROTO3_jmhTest" sourceFile="CodecBenchmarks_readClientSpan_PROTO3_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_readClientSpan_THRIFT_jmhTest" sourceFile="CodecBenchmarks_readClientSpan_THRIFT_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_readTenClientSpans_JSON_V2_jmhTest" sourceFile="CodecBenchmarks_readTenClientSpans_JSON_V2_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_writeChineseSpan_JSON_V1_jmhTest" sourceFile="CodecBenchmarks_writeChineseSpan_JSON_V1_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_writeChineseSpan_JSON_V2_jmhTest" sourceFile="CodecBenchmarks_writeChineseSpan_JSON_V2_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_writeChineseSpan_PROTO3_jmhTest" sourceFile="CodecBenchmarks_writeChineseSpan_PROTO3_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_writeChineseSpan_THRIFT_jmhTest" sourceFile="CodecBenchmarks_writeChineseSpan_THRIFT_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_writeClientSpan_JSON_V1_jmhTest" sourceFile="CodecBenchmarks_writeClientSpan_JSON_V1_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_writeClientSpan_JSON_V2_jmhTest" sourceFile="CodecBenchmarks_writeClientSpan_JSON_V2_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_writeClientSpan_PROTO3_jmhTest" sourceFile="CodecBenchmarks_writeClientSpan_PROTO3_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_writeClientSpan_THRIFT_jmhTest" sourceFile="CodecBenchmarks_writeClientSpan_THRIFT_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.CodecBenchmarks_writeTenClientSpans_JSON_V2_jmhTest" sourceFile="CodecBenchmarks_writeTenClientSpans_JSON_V2_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.JsonCodecBenchmarks_bytebuffer_jacksonDecoder_jmhTest" sourceFile="JsonCodecBenchmarks_bytebuffer_jacksonDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.JsonCodecBenchmarks_bytebuffer_moshiDecoder_jmhTest" sourceFile="JsonCodecBenchmarks_bytebuffer_moshiDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.JsonCodecBenchmarks_bytebuffer_zipkinDecoder_jmhTest" sourceFile="JsonCodecBenchmarks_bytebuffer_zipkinDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.JsonCodecBenchmarks_bytes_jacksonDecoder_jmhTest" sourceFile="JsonCodecBenchmarks_bytes_jacksonDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.JsonCodecBenchmarks_bytes_moshiDecoder_jmhTest" sourceFile="JsonCodecBenchmarks_bytes_moshiDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.JsonCodecBenchmarks_bytes_zipkinDecoder_jmhTest" sourceFile="JsonCodecBenchmarks_bytes_zipkinDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.JsonCodecBenchmarks_jmhType" sourceFile="JsonCodecBenchmarks_jmhType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.JsonCodecBenchmarks_jmhType_B1" sourceFile="JsonCodecBenchmarks_jmhType_B1.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.JsonCodecBenchmarks_jmhType_B2" sourceFile="JsonCodecBenchmarks_jmhType_B2.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.JsonCodecBenchmarks_jmhType_B3" sourceFile="JsonCodecBenchmarks_jmhType_B3.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.ProtoCodecBenchmarks_bytebuffer_protobufDecoder_jmhTest" sourceFile="ProtoCodecBenchmarks_bytebuffer_protobufDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.ProtoCodecBenchmarks_bytebuffer_wireDecoder_jmhTest" sourceFile="ProtoCodecBenchmarks_bytebuffer_wireDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.ProtoCodecBenchmarks_bytebuffer_zipkinDecoder_jmhTest" sourceFile="ProtoCodecBenchmarks_bytebuffer_zipkinDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.ProtoCodecBenchmarks_bytes_protobufDecoder_jmhTest" sourceFile="ProtoCodecBenchmarks_bytes_protobufDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.ProtoCodecBenchmarks_bytes_wireDecoder_jmhTest" sourceFile="ProtoCodecBenchmarks_bytes_wireDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.ProtoCodecBenchmarks_bytes_zipkinDecoder_jmhTest" sourceFile="ProtoCodecBenchmarks_bytes_zipkinDecoder_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.ProtoCodecBenchmarks_jmhType" sourceFile="ProtoCodecBenchmarks_jmhType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.ProtoCodecBenchmarks_jmhType_B1" sourceFile="ProtoCodecBenchmarks_jmhType_B1.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.ProtoCodecBenchmarks_jmhType_B2" sourceFile="ProtoCodecBenchmarks_jmhType_B2.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.codec.jmh_generated.ProtoCodecBenchmarks_jmhType_B3" sourceFile="ProtoCodecBenchmarks_jmhType_B3.java" interface="false" size="259" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.collector" total_bugs="3" total_types="1" total_size="34" priority_3="3">
+      <ClassStats class="zipkin2.collector.MetricsBenchmarks" sourceFile="MetricsBenchmarks.java" interface="false" size="34" bugs="3" priority_3="3"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.collector.jmh_generated" total_bugs="0" total_types="10" total_size="3447">
+      <ClassStats class="zipkin2.collector.jmh_generated.MetricsBenchmarks_incrementBytes_longSpans_Actuate_jmhTest" sourceFile="MetricsBenchmarks_incrementBytes_longSpans_Actuate_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.collector.jmh_generated.MetricsBenchmarks_incrementBytes_longSpans_inMemory_jmhTest" sourceFile="MetricsBenchmarks_incrementBytes_longSpans_inMemory_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.collector.jmh_generated.MetricsBenchmarks_incrementBytes_mediumSpans_Actuate_jmhTest" sourceFile="MetricsBenchmarks_incrementBytes_mediumSpans_Actuate_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.collector.jmh_generated.MetricsBenchmarks_incrementBytes_mediumSpans_inMemory_jmhTest" sourceFile="MetricsBenchmarks_incrementBytes_mediumSpans_inMemory_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.collector.jmh_generated.MetricsBenchmarks_incrementBytes_shortSpans_Actuate_jmhTest" sourceFile="MetricsBenchmarks_incrementBytes_shortSpans_Actuate_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.collector.jmh_generated.MetricsBenchmarks_incrementBytes_shortSpans_inMemory_jmhTest" sourceFile="MetricsBenchmarks_incrementBytes_shortSpans_inMemory_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.collector.jmh_generated.MetricsBenchmarks_jmhType" sourceFile="MetricsBenchmarks_jmhType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="zipkin2.collector.jmh_generated.MetricsBenchmarks_jmhType_B1" sourceFile="MetricsBenchmarks_jmhType_B1.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.collector.jmh_generated.MetricsBenchmarks_jmhType_B2" sourceFile="MetricsBenchmarks_jmhType_B2.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.collector.jmh_generated.MetricsBenchmarks_jmhType_B3" sourceFile="MetricsBenchmarks_jmhType_B3.java" interface="false" size="259" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.elasticsearch.internal" total_bugs="9" total_types="1" total_size="42" priority_2="3" priority_1="6">
+      <ClassStats class="zipkin2.elasticsearch.internal.BulkRequestBenchmarks" sourceFile="BulkRequestBenchmarks.java" interface="false" size="42" bugs="9" priority_2="3" priority_1="6"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.elasticsearch.internal.jmh_generated" total_bugs="0" total_types="7" total_size="1995">
+      <ClassStats class="zipkin2.elasticsearch.internal.jmh_generated.BulkRequestBenchmarks_buildAndWriteRequest_singleSpan_jmhTest" sourceFile="BulkRequestBenchmarks_buildAndWriteRequest_singleSpan_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.elasticsearch.internal.jmh_generated.BulkRequestBenchmarks_buildAndWriteRequest_tenSpans_jmhTest" sourceFile="BulkRequestBenchmarks_buildAndWriteRequest_tenSpans_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.elasticsearch.internal.jmh_generated.BulkRequestBenchmarks_jmhType" sourceFile="BulkRequestBenchmarks_jmhType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="zipkin2.elasticsearch.internal.jmh_generated.BulkRequestBenchmarks_jmhType_B1" sourceFile="BulkRequestBenchmarks_jmhType_B1.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.elasticsearch.internal.jmh_generated.BulkRequestBenchmarks_jmhType_B2" sourceFile="BulkRequestBenchmarks_jmhType_B2.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.elasticsearch.internal.jmh_generated.BulkRequestBenchmarks_jmhType_B3" sourceFile="BulkRequestBenchmarks_jmhType_B3.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.elasticsearch.internal.jmh_generated.BulkRequestBenchmarks_writeRequest_singleSpan_jmhTest" sourceFile="BulkRequestBenchmarks_writeRequest_singleSpan_jmhTest.java" interface="false" size="484" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.internal" total_bugs="8" total_types="3" total_size="93" priority_3="4" priority_1="4">
+      <ClassStats class="zipkin2.internal.DelayLimiterBenchmarks" sourceFile="DelayLimiterBenchmarks.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="zipkin2.internal.ReadBufferBenchmarks" sourceFile="ReadBufferBenchmarks.java" interface="false" size="30" bugs="4" priority_1="4"/>
+      <ClassStats class="zipkin2.internal.WriteBufferBenchmarks" sourceFile="WriteBufferBenchmarks.java" interface="false" size="42" bugs="4" priority_3="4"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.internal.jmh_generated" total_bugs="0" total_types="27" total_size="8889">
+      <ClassStats class="zipkin2.internal.jmh_generated.DelayLimiterBenchmarks_jmhType" sourceFile="DelayLimiterBenchmarks_jmhType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.DelayLimiterBenchmarks_jmhType_B1" sourceFile="DelayLimiterBenchmarks_jmhType_B1.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.DelayLimiterBenchmarks_jmhType_B2" sourceFile="DelayLimiterBenchmarks_jmhType_B2.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.DelayLimiterBenchmarks_jmhType_B3" sourceFile="DelayLimiterBenchmarks_jmhType_B3.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.DelayLimiterBenchmarks_shouldInvoke_randomData_jmhTest" sourceFile="DelayLimiterBenchmarks_shouldInvoke_randomData_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.DelayLimiterBenchmarks_shouldInvoke_sameData_jmhTest" sourceFile="DelayLimiterBenchmarks_shouldInvoke_sameData_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.ReadBufferBenchmarks_jmhType" sourceFile="ReadBufferBenchmarks_jmhType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.ReadBufferBenchmarks_jmhType_B1" sourceFile="ReadBufferBenchmarks_jmhType_B1.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.ReadBufferBenchmarks_jmhType_B2" sourceFile="ReadBufferBenchmarks_jmhType_B2.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.ReadBufferBenchmarks_jmhType_B3" sourceFile="ReadBufferBenchmarks_jmhType_B3.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.ReadBufferBenchmarks_readLongReverseBytes_jmhTest" sourceFile="ReadBufferBenchmarks_readLongReverseBytes_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.ReadBufferBenchmarks_readLong_8arity_jmhTest" sourceFile="ReadBufferBenchmarks_readLong_8arity_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.ReadBufferBenchmarks_readLong_8arity_localArray_jmhTest" sourceFile="ReadBufferBenchmarks_readLong_8arity_localArray_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.ReadBufferBenchmarks_readLong_jmhTest" sourceFile="ReadBufferBenchmarks_readLong_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.ReadBufferBenchmarks_readLong_localArray_jmhTest" sourceFile="ReadBufferBenchmarks_readLong_localArray_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_jmhType" sourceFile="WriteBufferBenchmarks_jmhType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_jmhType_B1" sourceFile="WriteBufferBenchmarks_jmhType_B1.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_jmhType_B2" sourceFile="WriteBufferBenchmarks_jmhType_B2.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_jmhType_B3" sourceFile="WriteBufferBenchmarks_jmhType_B3.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_utf8SizeInBytes_chinese_jmhTest" sourceFile="WriteBufferBenchmarks_utf8SizeInBytes_chinese_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_varIntSizeInBytes_32_jmhTest" sourceFile="WriteBufferBenchmarks_varIntSizeInBytes_32_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_varIntSizeInBytes_64_jmhTest" sourceFile="WriteBufferBenchmarks_varIntSizeInBytes_64_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_writeLongLe_jmhTest" sourceFile="WriteBufferBenchmarks_writeLongLe_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_writeUtf8_chinese_jdk_jmhTest" sourceFile="WriteBufferBenchmarks_writeUtf8_chinese_jdk_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_writeUtf8_chinese_jmhTest" sourceFile="WriteBufferBenchmarks_writeUtf8_chinese_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_writeVarint_32_jmhTest" sourceFile="WriteBufferBenchmarks_writeVarint_32_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.internal.jmh_generated.WriteBufferBenchmarks_writeVarint_64_jmhTest" sourceFile="WriteBufferBenchmarks_writeVarint_64_jmhTest.java" interface="false" size="484" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.jmh_generated" total_bugs="0" total_types="24" total_size="8830">
+      <ClassStats class="zipkin2.jmh_generated.EndpointBenchmarks_jmhType" sourceFile="EndpointBenchmarks_jmhType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.EndpointBenchmarks_jmhType_B1" sourceFile="EndpointBenchmarks_jmhType_B1.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.EndpointBenchmarks_jmhType_B2" sourceFile="EndpointBenchmarks_jmhType_B2.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.EndpointBenchmarks_jmhType_B3" sourceFile="EndpointBenchmarks_jmhType_B3.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.EndpointBenchmarks_parseIpv4_addr_jmhTest" sourceFile="EndpointBenchmarks_parseIpv4_addr_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.EndpointBenchmarks_parseIpv4_bytes_jmhTest" sourceFile="EndpointBenchmarks_parseIpv4_bytes_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.EndpointBenchmarks_parseIpv4_literal_jmhTest" sourceFile="EndpointBenchmarks_parseIpv4_literal_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.EndpointBenchmarks_parseIpv6_addr_jmhTest" sourceFile="EndpointBenchmarks_parseIpv6_addr_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.EndpointBenchmarks_parseIpv6_bytes_jmhTest" sourceFile="EndpointBenchmarks_parseIpv6_bytes_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.EndpointBenchmarks_parseIpv6_literal_jmhTest" sourceFile="EndpointBenchmarks_parseIpv6_literal_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_buildClientSpan_clear_jmhTest" sourceFile="SpanBenchmarks_buildClientSpan_clear_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_buildClientSpan_clone_jmhTest" sourceFile="SpanBenchmarks_buildClientSpan_clone_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_buildClientSpan_jmhTest" sourceFile="SpanBenchmarks_buildClientSpan_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_buildClientSpan_longs_jmhTest" sourceFile="SpanBenchmarks_buildClientSpan_longs_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_deserialize_kryo_jmhTest" sourceFile="SpanBenchmarks_deserialize_kryo_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_jmhType" sourceFile="SpanBenchmarks_jmhType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_jmhType_B1" sourceFile="SpanBenchmarks_jmhType_B1.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_jmhType_B2" sourceFile="SpanBenchmarks_jmhType_B2.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_jmhType_B3" sourceFile="SpanBenchmarks_jmhType_B3.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_padLeft_15Chars_jmhTest" sourceFile="SpanBenchmarks_padLeft_15Chars_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_padLeft_17Chars_jmhTest" sourceFile="SpanBenchmarks_padLeft_17Chars_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_padLeft_1Char_jmhTest" sourceFile="SpanBenchmarks_padLeft_1Char_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_padLeft_31Chars_jmhTest" sourceFile="SpanBenchmarks_padLeft_31Chars_jmhTest.java" interface="false" size="484" bugs="0"/>
+      <ClassStats class="zipkin2.jmh_generated.SpanBenchmarks_serialize_kryo_jmhTest" sourceFile="SpanBenchmarks_serialize_kryo_jmhTest.java" interface="false" size="484" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.proto3" total_bugs="0" total_types="17" total_size="665">
+      <ClassStats class="zipkin2.proto3.Annotation" sourceFile="Annotation.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.Annotation$Builder" sourceFile="Annotation.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.Annotation$ProtoAdapter_Annotation" sourceFile="Annotation.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.Endpoint" sourceFile="Endpoint.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.Endpoint$Builder" sourceFile="Endpoint.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.Endpoint$ProtoAdapter_Endpoint" sourceFile="Endpoint.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.ListOfSpans" sourceFile="ListOfSpans.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.ListOfSpans$Builder" sourceFile="ListOfSpans.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.ListOfSpans$ProtoAdapter_ListOfSpans" sourceFile="ListOfSpans.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.ReportResponse" sourceFile="ReportResponse.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.ReportResponse$Builder" sourceFile="ReportResponse.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.ReportResponse$ProtoAdapter_ReportResponse" sourceFile="ReportResponse.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.Span" sourceFile="Span.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.Span$Builder" sourceFile="Span.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.Span$Kind" sourceFile="Span.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.Span$Kind$ProtoAdapter_Kind" sourceFile="Span.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="zipkin2.proto3.Span$ProtoAdapter_Span" sourceFile="Span.java" interface="false" size="74" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.server.internal.throttle" total_bugs="6" total_types="2" total_size="71" priority_3="3" priority_2="1" priority_1="2">
+      <ClassStats class="zipkin2.server.internal.throttle.ThrottledCallBenchmarks" sourceFile="ThrottledCallBenchmarks.java" interface="false" size="46" bugs="5" priority_3="3" priority_2="1" priority_1="1"/>
+      <ClassStats class="zipkin2.server.internal.throttle.ThrottledCallBenchmarks$FakeCall" sourceFile="ThrottledCallBenchmarks.java" interface="false" size="25" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="zipkin2.server.internal.throttle.jmh_generated" total_bugs="0" total_types="7" total_size="2010">
+      <ClassStats class="zipkin2.server.internal.throttle.jmh_generated.ThrottledCallBenchmarks_execute_jmhTest" sourceFile="ThrottledCallBenchmarks_execute_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.server.internal.throttle.jmh_generated.ThrottledCallBenchmarks_execute_overCapacity_jmhTest" sourceFile="ThrottledCallBenchmarks_execute_overCapacity_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.server.internal.throttle.jmh_generated.ThrottledCallBenchmarks_execute_throttled_jmhTest" sourceFile="ThrottledCallBenchmarks_execute_throttled_jmhTest.java" interface="false" size="489" bugs="0"/>
+      <ClassStats class="zipkin2.server.internal.throttle.jmh_generated.ThrottledCallBenchmarks_jmhType" sourceFile="ThrottledCallBenchmarks_jmhType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="zipkin2.server.internal.throttle.jmh_generated.ThrottledCallBenchmarks_jmhType_B1" sourceFile="ThrottledCallBenchmarks_jmhType_B1.java" interface="false" size="259" bugs="0"/>
+      <ClassStats class="zipkin2.server.internal.throttle.jmh_generated.ThrottledCallBenchmarks_jmhType_B2" sourceFile="ThrottledCallBenchmarks_jmhType_B2.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="zipkin2.server.internal.throttle.jmh_generated.ThrottledCallBenchmarks_jmhType_B3" sourceFile="ThrottledCallBenchmarks_jmhType_B3.java" interface="false" size="259" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="432" invocations="1079" avgMicrosecondsPerInvocation="401" maxMicrosecondsPerInvocation="10019" standardDeviationMicrosecondsPerInvocation="717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="411" invocations="1111" avgMicrosecondsPerInvocation="369" maxMicrosecondsPerInvocation="20800" standardDeviationMicrosecondsPerInvocation="929"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="362" invocations="1053" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="12077" standardDeviationMicrosecondsPerInvocation="620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="354" invocations="1093" avgMicrosecondsPerInvocation="324" maxMicrosecondsPerInvocation="12313" standardDeviationMicrosecondsPerInvocation="671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="274" invocations="1020" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="9957" standardDeviationMicrosecondsPerInvocation="610"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="272" invocations="1106" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="6829" standardDeviationMicrosecondsPerInvocation="482"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="212" invocations="1815" avgMicrosecondsPerInvocation="116" maxMicrosecondsPerInvocation="2408" standardDeviationMicrosecondsPerInvocation="172"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="208" invocations="1067" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="5357" standardDeviationMicrosecondsPerInvocation="324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="186" invocations="154" avgMicrosecondsPerInvocation="1208" maxMicrosecondsPerInvocation="105251" standardDeviationMicrosecondsPerInvocation="8456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="171" invocations="1093" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="5135" standardDeviationMicrosecondsPerInvocation="321"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="165" invocations="224" avgMicrosecondsPerInvocation="737" maxMicrosecondsPerInvocation="21792" standardDeviationMicrosecondsPerInvocation="1710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="147" invocations="1093" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="18077" standardDeviationMicrosecondsPerInvocation="593"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="137" invocations="154" avgMicrosecondsPerInvocation="894" maxMicrosecondsPerInvocation="86696" standardDeviationMicrosecondsPerInvocation="6956"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="123" invocations="1033" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="17189" standardDeviationMicrosecondsPerInvocation="575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="110" invocations="154" avgMicrosecondsPerInvocation="718" maxMicrosecondsPerInvocation="6258" standardDeviationMicrosecondsPerInvocation="789"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="91" invocations="1051" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="5458" standardDeviationMicrosecondsPerInvocation="234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="86" invocations="224" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="4520" standardDeviationMicrosecondsPerInvocation="518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="82" invocations="1093" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="11586" standardDeviationMicrosecondsPerInvocation="402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="74" invocations="154" avgMicrosecondsPerInvocation="484" maxMicrosecondsPerInvocation="6115" standardDeviationMicrosecondsPerInvocation="687"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="71" invocations="224" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="2589" standardDeviationMicrosecondsPerInvocation="394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="69" invocations="154" avgMicrosecondsPerInvocation="452" maxMicrosecondsPerInvocation="8100" standardDeviationMicrosecondsPerInvocation="793"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="67" invocations="154" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="24791" standardDeviationMicrosecondsPerInvocation="1989"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="62" invocations="154" avgMicrosecondsPerInvocation="405" maxMicrosecondsPerInvocation="14283" standardDeviationMicrosecondsPerInvocation="1325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="60" invocations="1093" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="4130" standardDeviationMicrosecondsPerInvocation="219"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="59" invocations="154" avgMicrosecondsPerInvocation="386" maxMicrosecondsPerInvocation="14903" standardDeviationMicrosecondsPerInvocation="1301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPublicAttributes" totalMilliseconds="58" invocations="154" avgMicrosecondsPerInvocation="378" maxMicrosecondsPerInvocation="18347" standardDeviationMicrosecondsPerInvocation="1530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="57" invocations="154" avgMicrosecondsPerInvocation="376" maxMicrosecondsPerInvocation="11306" standardDeviationMicrosecondsPerInvocation="973"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="57" invocations="351" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="14457" standardDeviationMicrosecondsPerInvocation="878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="55" invocations="224" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="2770" standardDeviationMicrosecondsPerInvocation="373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectionIncreaseAccessibility" totalMilliseconds="54" invocations="154" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="9413" standardDeviationMicrosecondsPerInvocation="796"/>
+      <ClassProfile name="de.heidelberg.pvs.diego.detectors.IgnoredMethodReturnDetector" totalMilliseconds="53" invocations="154" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="14789" standardDeviationMicrosecondsPerInvocation="1200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="52" invocations="154" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="2526" standardDeviationMicrosecondsPerInvocation="391"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="51" invocations="154" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="6346" standardDeviationMicrosecondsPerInvocation="674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPotentialSecurityCheckBasedOnUntrustedSource" totalMilliseconds="51" invocations="154" avgMicrosecondsPerInvocation="332" maxMicrosecondsPerInvocation="7148" standardDeviationMicrosecondsPerInvocation="686"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="47" invocations="154" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="5021" standardDeviationMicrosecondsPerInvocation="672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="43" invocations="154" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="4617" standardDeviationMicrosecondsPerInvocation="486"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindArgumentAssertions" totalMilliseconds="43" invocations="154" avgMicrosecondsPerInvocation="280" maxMicrosecondsPerInvocation="12548" standardDeviationMicrosecondsPerInvocation="1053"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnrelatedTypesInGenericContainer" totalMilliseconds="40" invocations="154" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="24096" standardDeviationMicrosecondsPerInvocation="1934"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="39" invocations="154" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="2234" standardDeviationMicrosecondsPerInvocation="305"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="39" invocations="154" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="2751" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="38" invocations="1053" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="583" standardDeviationMicrosecondsPerInvocation="55"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="38" invocations="154" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="1860" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="38" invocations="154" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="2566" standardDeviationMicrosecondsPerInvocation="308"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindFloatEquality" totalMilliseconds="37" invocations="154" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="9267" standardDeviationMicrosecondsPerInvocation="749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="36" invocations="51568" avgMicrosecondsPerInvocation="0" maxMicrosecondsPerInvocation="775" standardDeviationMicrosecondsPerInvocation="8"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CrossSiteScripting" totalMilliseconds="36" invocations="154" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="5289" standardDeviationMicrosecondsPerInvocation="453"/>
+      <ClassProfile name="de.heidelberg.pvs.diego.detectors.UnsafeLoopInsideBenchmarkDetector" totalMilliseconds="36" invocations="154" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="2573" standardDeviationMicrosecondsPerInvocation="297"/>
+      <ClassProfile name="de.heidelberg.pvs.diego.detectors.DeadStoreBenchmarkDetector" totalMilliseconds="36" invocations="154" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="2932" standardDeviationMicrosecondsPerInvocation="306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="35" invocations="154" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="11702" standardDeviationMicrosecondsPerInvocation="1045"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.IncompatMask" totalMilliseconds="35" invocations="154" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="2366" standardDeviationMicrosecondsPerInvocation="272"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDoubleCheck" totalMilliseconds="35" invocations="154" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="1855" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOverridableMethodCall" totalMilliseconds="35" invocations="154" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="4715" standardDeviationMicrosecondsPerInvocation="432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BadSyntaxForRegularExpression" totalMilliseconds="35" invocations="154" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="5149" standardDeviationMicrosecondsPerInvocation="441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadEndOfStreamCheck" totalMilliseconds="35" invocations="154" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="4740" standardDeviationMicrosecondsPerInvocation="428"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

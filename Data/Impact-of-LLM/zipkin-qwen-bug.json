@@ -1,0 +1,53 @@
+{
+  "v2_llm2jmh-qwen25-coder-32b_HWO_zipkin2.Annotation.value_48": [
+    -0.3517763562102969,
+    -0.449337029576222,
+    -0.5398446097789407
+  ],
+  "v2_llm2jmh-qwen25-coder-32b_HWO_zipkin2.Endpoint.equals_571": [
+    -0.3631418719795785,
+    -0.474867064368657,
+    -0.4523408914069109
+  ],
+  "v2_llm2jmh-qwen25-coder-32b_HWO_zipkin2.Endpoint.portAsInt_99": [
+    -0.5420667835955144,
+    -0.4205955871167071
+  ],
+  "v2_llm2jmh-qwen25-coder-32b_HWO_zipkin2.Span-Builder.build_596": [
+    -0.045047263146227534,
+    -0.45421152281925603,
+    -0.4210711873110269,
+    -0.45994060210625354,
+    -0.0038553426860266082,
+    -0.008252814223069338,
+    -0.0075420956035119335
+  ],
+  "v2_llm2jmh-qwen25-coder-32b_HWO_zipkin2.Span-Builder.parentId_437": [
+    -0.41621621496610595,
+    -0.30247368120820783,
+    -0.27285593696234267
+  ],
+  "v2_llm2jmh-qwen25-coder-32b_HWO_zipkin2.Span-Builder.timestamp_489": [
+    -0.3611840208206005,
+    -0.27820112360302485,
+    -0.3047194884538993,
+    -0.001310547331271783,
+    0.0011564969417561244,
+    -0.01320336559117763
+  ],
+  "v2_llm2jmh-qwen25-coder-32b_HWO_zipkin2.codec.SpanBytesEncoder-3.encodeList_102": [
+    -0.035053288274136785
+  ],
+  "v2_llm2jmh-qwen25-coder-32b_HWO_zipkin2.internal.JsonCodec-JsonReader.nextLong_87": [
+    0.08855663275171843
+  ],
+  "v2_llm2jmh-qwen25-coder-32b_HWO_zipkin2.internal.WriteBuffer.writeAscii_147": [
+    -0.0046522820753915894
+  ],
+  "v2_llm2jmh-qwen25-coder-32b_HWO_zipkin2.v1.V1Span-Builder.id_205": [
+    0.0006246310234291341
+  ],
+  "v2_llm2jmh-qwen25-coder-32b_HWO_zipkin2.v1.V1SpanConverter.create_32": [
+    -0.002272681440747215
+  ]
+}

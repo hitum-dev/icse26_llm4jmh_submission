@@ -1,0 +1,7 @@
+Subject,Benchmark Suites,RETU,LOOP,FINAL,INVO,FORK,Overall
+RxJava,JMH,0.92,6.91,0.0,0.0,0.0,6.45
+RxJava,LLM4JMH,4.14,2.86,0.43,0.0,0.0,7.43
+Eclipse-Collections,JMH,16.31,18.62,0.58,0.0,0.0,35.51
+Eclipse-Collections,LLM4JMH,7.15,3.3,0.09,0.0,0.0,10.54
+Zipkin,JMH,8.22,0.0,0.0,0.0,0.0,8.22
+Zipkin,LLM4JMH,5.71,1.14,0.0,0.0,0.0,6.86

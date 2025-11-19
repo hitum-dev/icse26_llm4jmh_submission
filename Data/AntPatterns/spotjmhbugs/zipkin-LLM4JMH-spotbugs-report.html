@@ -1,0 +1,2437 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+				color: red;
+				font-weight: bold;
+		}
+		.priority-2 {
+				color: orange;
+				font-weight: bold;
+		}
+		.priority-3 {
+				color: green;
+				font-weight: bold;
+		}
+		.priority-4 {
+				color: blue;
+				font-weight: bold;
+		}
+		</style>
+      <script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+   </head>
+   <body>
+      <h1>
+         <a href="https://spotbugs.github.io/">SpotBugs</a> Report</h1>
+      <h2>Project Information</h2>
+      <p>Project: 
+		</p>
+      <p>SpotBugs version: 4.8.3</p>
+      <p>Code analyzed:</p>
+      <ul>
+         <li>projects/zipkin/llm2jmh-gptoss-120b/target/classes</li>
+      </ul>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Metrics</h2>
+      <p>123595 lines of code analyzed,
+	in 495 classes, 
+	in 27 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right">21</td>
+            <td align="right">0.17</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">28</td>
+            <td align="right">0.23</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Low Priority Warnings</td>
+            <td align="right">92</td>
+            <td align="right">0.74</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>141</b>
+            </td>
+            <td align="right">
+               <b>1.14</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Contents</h2>
+      <ul>
+         <li>
+            <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_I18N">Internationalization Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_JMH">JMH Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+         </li>
+         <li>
+            <a href="#Details">Details</a>
+         </li>
+      </ul>
+      <h1>Summary</h1>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+            </td>
+            <td align="right">13</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_I18N">Internationalization Warnings</a>
+            </td>
+            <td align="right">2</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_JMH">JMH Warnings</a>
+            </td>
+            <td align="right">58</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+            </td>
+            <td align="right">1</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+            </td>
+            <td align="right">5</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+            </td>
+            <td align="right">62</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>141</b>
+            </td>
+         </tr>
+      </table>
+      <h1>Warnings</h1>
+      <p>Click on a warning row to see full context information.</p>
+      <h2>
+         <a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e120');">
+            <td>
+               <span class="priority-1">CN</span>
+            </td>
+            <td>zipkin2.CallBenchmark$1 defines clone() but doesn't implement Cloneable</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e120" style="display: none;">
+                  <a href="#CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE">Bug type CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE (click for details)</a>
+                  <br/>In class zipkin2.CallBenchmark$1<br/>In method zipkin2.CallBenchmark$1.clone()<br/>At CallBenchmark.java:[line 58]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e412');">
+            <td>
+               <span class="priority-1">CN</span>
+            </td>
+            <td>zipkin2.collector.CollectorBenchmark$NoopStorage$1 defines clone() but doesn't implement Cloneable</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e412" style="display: none;">
+                  <a href="#CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE">Bug type CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE (click for details)</a>
+                  <br/>In class zipkin2.collector.CollectorBenchmark$NoopStorage$1<br/>In method zipkin2.collector.CollectorBenchmark$NoopStorage$1.clone()<br/>At CollectorBenchmark.java:[line 49]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1065');">
+            <td>
+               <span class="priority-1">DMI</span>
+            </td>
+            <td>Random object created and used only once in zipkin2.internal.HexCodecBenchmark.generateLowerHex(int)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1065" style="display: none;">
+                  <a href="#DMI_RANDOM_USED_ONLY_ONCE">Bug type DMI_RANDOM_USED_ONLY_ONCE (click for details)</a>
+                  <br/>In class zipkin2.internal.HexCodecBenchmark<br/>In method zipkin2.internal.HexCodecBenchmark.generateLowerHex(int)<br/>Called method java.util.Random.nextInt(int)<br/>At HexCodecBenchmark.java:[line 66]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1462');">
+            <td>
+               <span class="priority-1">DMI</span>
+            </td>
+            <td>Random object created and used only once in zipkin2.server.internal.ZipkinHttpCollectorBenchmark.setUp()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1462" style="display: none;">
+                  <a href="#DMI_RANDOM_USED_ONLY_ONCE">Bug type DMI_RANDOM_USED_ONLY_ONCE (click for details)</a>
+                  <br/>In class zipkin2.server.internal.ZipkinHttpCollectorBenchmark<br/>In method zipkin2.server.internal.ZipkinHttpCollectorBenchmark.setUp()<br/>Called method java.util.Random.nextBytes(byte[])<br/>At ZipkinHttpCollectorBenchmark.java:[line 58]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1477');">
+            <td>
+               <span class="priority-1">DMI</span>
+            </td>
+            <td>Random object created and used only once in zipkin2.server.internal.ZipkinHttpCollectorBenchmark.setUp()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1477" style="display: none;">
+                  <a href="#DMI_RANDOM_USED_ONLY_ONCE">Bug type DMI_RANDOM_USED_ONLY_ONCE (click for details)</a>
+                  <br/>In class zipkin2.server.internal.ZipkinHttpCollectorBenchmark<br/>In method zipkin2.server.internal.ZipkinHttpCollectorBenchmark.setUp()<br/>Called method java.util.Random.nextInt(int)<br/>At ZipkinHttpCollectorBenchmark.java:[line 60]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1913');">
+            <td>
+               <span class="priority-1">DMI</span>
+            </td>
+            <td>Random object created and used only once in zipkin2.storage.cassandra.CassandraUtilBenchmark.setUp()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1913" style="display: none;">
+                  <a href="#DMI_RANDOM_USED_ONLY_ONCE">Bug type DMI_RANDOM_USED_ONLY_ONCE (click for details)</a>
+                  <br/>In class zipkin2.storage.cassandra.CassandraUtilBenchmark<br/>In method zipkin2.storage.cassandra.CassandraUtilBenchmark.setUp()<br/>Called method java.util.Random.nextInt(int)<br/>At CassandraUtilBenchmark.java:[line 81]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1928');">
+            <td>
+               <span class="priority-1">DMI</span>
+            </td>
+            <td>Random object created and used only once in zipkin2.storage.cassandra.CassandraUtilBenchmark.setUp()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1928" style="display: none;">
+                  <a href="#DMI_RANDOM_USED_ONLY_ONCE">Bug type DMI_RANDOM_USED_ONLY_ONCE (click for details)</a>
+                  <br/>In class zipkin2.storage.cassandra.CassandraUtilBenchmark<br/>In method zipkin2.storage.cassandra.CassandraUtilBenchmark.setUp()<br/>Called method java.util.Random.nextLong()<br/>At CassandraUtilBenchmark.java:[line 82]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e5');">
+            <td>
+               <span class="priority-3">Nm</span>
+            </td>
+            <td>Confusing to have methods zipkin2.CallBenchmark.setUp() and zipkin2.internal.V1JsonSpanReaderBenchmark.setup()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e5" style="display: none;">
+                  <a href="#NM_CONFUSING">Bug type NM_CONFUSING (click for details)</a>
+                  <br/>In class zipkin2.CallBenchmark<br/>In method zipkin2.CallBenchmark.setUp()<br/>In class zipkin2.internal.V1JsonSpanReaderBenchmark<br/>In method zipkin2.internal.V1JsonSpanReaderBenchmark.setup()<br/>At CallBenchmark.java:[lines 24-61]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1783');">
+            <td>
+               <span class="priority-2">PA</span>
+            </td>
+            <td>Primitive field zipkin2.storage.StrictTraceIdBenchmark.dummyRequest is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1783" style="display: none;">
+                  <a href="#PA_PUBLIC_PRIMITIVE_ATTRIBUTE">Bug type PA_PUBLIC_PRIMITIVE_ATTRIBUTE (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>Field zipkin2.storage.StrictTraceIdBenchmark.dummyRequest<br/>At StrictTraceIdBenchmark.java:[line 124]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1796');">
+            <td>
+               <span class="priority-2">PA</span>
+            </td>
+            <td>Primitive field zipkin2.storage.StrictTraceIdBenchmark.filterTraceIds is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1796" style="display: none;">
+                  <a href="#PA_PUBLIC_PRIMITIVE_ATTRIBUTE">Bug type PA_PUBLIC_PRIMITIVE_ATTRIBUTE (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>Field zipkin2.storage.StrictTraceIdBenchmark.filterTraceIds<br/>At StrictTraceIdBenchmark.java:[line 103]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1809');">
+            <td>
+               <span class="priority-2">PA</span>
+            </td>
+            <td>Primitive field zipkin2.storage.StrictTraceIdBenchmark.spans is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1809" style="display: none;">
+                  <a href="#PA_PUBLIC_PRIMITIVE_ATTRIBUTE">Bug type PA_PUBLIC_PRIMITIVE_ATTRIBUTE (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>Field zipkin2.storage.StrictTraceIdBenchmark.spans<br/>At StrictTraceIdBenchmark.java:[line 107]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1822');">
+            <td>
+               <span class="priority-2">PA</span>
+            </td>
+            <td>Primitive field zipkin2.storage.StrictTraceIdBenchmark.targetTraceId is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1822" style="display: none;">
+                  <a href="#PA_PUBLIC_PRIMITIVE_ATTRIBUTE">Bug type PA_PUBLIC_PRIMITIVE_ATTRIBUTE (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>Field zipkin2.storage.StrictTraceIdBenchmark.targetTraceId<br/>At StrictTraceIdBenchmark.java:[line 102]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1835');">
+            <td>
+               <span class="priority-2">PA</span>
+            </td>
+            <td>Primitive field zipkin2.storage.StrictTraceIdBenchmark.traces is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1835" style="display: none;">
+                  <a href="#PA_PUBLIC_PRIMITIVE_ATTRIBUTE">Bug type PA_PUBLIC_PRIMITIVE_ATTRIBUTE (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>Field zipkin2.storage.StrictTraceIdBenchmark.traces<br/>At StrictTraceIdBenchmark.java:[line 111]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_I18N">Internationalization Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e189');">
+            <td>
+               <span class="priority-1">Dm</span>
+            </td>
+            <td>Found reliance on default encoding in zipkin2.SpanBytesDecoderDetectorBenchmark.setUp(): String.getBytes()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e189" style="display: none;">
+                  <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+                  <br/>In class zipkin2.SpanBytesDecoderDetectorBenchmark<br/>In method zipkin2.SpanBytesDecoderDetectorBenchmark.setUp()<br/>Called method String.getBytes()<br/>At SpanBytesDecoderDetectorBenchmark.java:[line 67]<br/>Another occurrence at SpanBytesDecoderDetectorBenchmark.java:[line 69]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e506');">
+            <td>
+               <span class="priority-1">Dm</span>
+            </td>
+            <td>Found reliance on default encoding in zipkin2.elasticsearch.internal.BulkCallBuilderBenchmark$1.writeDocument(String, ByteBufOutputStream): String.getBytes()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e506" style="display: none;">
+                  <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.BulkCallBuilderBenchmark$1<br/>In method zipkin2.elasticsearch.internal.BulkCallBuilderBenchmark$1.writeDocument(String, ByteBufOutputStream)<br/>Called method String.getBytes()<br/>At BulkCallBuilderBenchmark.java:[line 70]<br/>Another occurrence at BulkCallBuilderBenchmark.java:[line 72]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_JMH">JMH Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1437');">
+            <td>
+               <span class="priority-2">JMHFIS</span>
+            </td>
+            <td>Fixture methods configured with Invocation scope in zipkin2.internal.WriteBufferBenchmark.setUpInvocation().</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1437" style="display: none;">
+                  <a href="#JMH_FIXTURE_USING_INVOCATION_SCOPE">Bug type JMH_FIXTURE_USING_INVOCATION_SCOPE (click for details)</a>
+                  <br/>In class zipkin2.internal.WriteBufferBenchmark<br/>In method zipkin2.internal.WriteBufferBenchmark.setUpInvocation()<br/>At WriteBufferBenchmark.java:[line 77]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e132');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.SpanBenchmark.buildSpan()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e132" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.SpanBenchmark<br/>In method zipkin2.SpanBenchmark.buildSpan()<br/>At SpanBenchmark.java:[line 99]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e286');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.codec.DependencyLinkBytesDecoderBenchmark.decodeList()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e286" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.codec.DependencyLinkBytesDecoderBenchmark<br/>In method zipkin2.codec.DependencyLinkBytesDecoderBenchmark.decodeList()<br/>At DependencyLinkBytesDecoderBenchmark.java:[line 125]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e481');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.elasticsearch.internal.BulkCallBuilderBenchmark.serializeBulkPayload()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e481" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.BulkCallBuilderBenchmark<br/>In method zipkin2.elasticsearch.internal.BulkCallBuilderBenchmark.serializeBulkPayload()<br/>At BulkCallBuilderBenchmark.java:[line 99]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e523');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.md5Hashing(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e523" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark<br/>In method zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.md5Hashing(Blackhole)<br/>At BulkIndexWriterBenchmark.java:[line 103]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e535');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.md5Hashing(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e535" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark<br/>In method zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.md5Hashing(Blackhole)<br/>At BulkIndexWriterBenchmark.java:[line 107]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e547');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.writeSpanWithSearch(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e547" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark<br/>In method zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.writeSpanWithSearch(Blackhole)<br/>At BulkIndexWriterBenchmark.java:[line 91]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e559');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.writeSpanWithoutSearch(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e559" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark<br/>In method zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.writeSpanWithoutSearch(Blackhole)<br/>At BulkIndexWriterBenchmark.java:[line 98]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e818');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseDependencyLink(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e818" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonSerializersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseDependencyLink(Blackhole)<br/>At JsonSerializersBenchmark.java:[line 50]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e830');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseSpan(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e830" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonSerializersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseSpan(Blackhole)<br/>At JsonSerializersBenchmark.java:[line 36]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1024');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.internal.DependencyLinkerBenchmark.benchmarkPutTrace()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1024" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.internal.DependencyLinkerBenchmark<br/>In method zipkin2.internal.DependencyLinkerBenchmark.benchmarkPutTrace()<br/>At DependencyLinkerBenchmark.java:[line 73]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1125');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.internal.Proto3FieldsBenchmark.sizeBooleanField()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1125" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.internal.Proto3FieldsBenchmark<br/>In method zipkin2.internal.Proto3FieldsBenchmark.sizeBooleanField()<br/>At Proto3FieldsBenchmark.java:[line 179]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1137');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.internal.Proto3FieldsBenchmark.sizeFixed64Field()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1137" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.internal.Proto3FieldsBenchmark<br/>In method zipkin2.internal.Proto3FieldsBenchmark.sizeFixed64Field()<br/>At Proto3FieldsBenchmark.java:[line 174]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1149');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.internal.Proto3FieldsBenchmark.sizeHexField()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1149" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.internal.Proto3FieldsBenchmark<br/>In method zipkin2.internal.Proto3FieldsBenchmark.sizeHexField()<br/>At Proto3FieldsBenchmark.java:[line 154]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1161');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.internal.Proto3FieldsBenchmark.sizeUtf8Field()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1161" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.internal.Proto3FieldsBenchmark<br/>In method zipkin2.internal.Proto3FieldsBenchmark.sizeUtf8Field()<br/>At Proto3FieldsBenchmark.java:[line 159]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1173');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.internal.Proto3FieldsBenchmark.sizeVarintInt()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1173" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.internal.Proto3FieldsBenchmark<br/>In method zipkin2.internal.Proto3FieldsBenchmark.sizeVarintInt()<br/>At Proto3FieldsBenchmark.java:[line 164]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1185');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.internal.Proto3FieldsBenchmark.sizeVarintLong()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1185" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.internal.Proto3FieldsBenchmark<br/>In method zipkin2.internal.Proto3FieldsBenchmark.sizeVarintLong()<br/>At Proto3FieldsBenchmark.java:[line 169]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1197');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.internal.Proto3FieldsBenchmark.writeFixed32Field()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1197" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.internal.Proto3FieldsBenchmark<br/>In method zipkin2.internal.Proto3FieldsBenchmark.writeFixed32Field()<br/>At Proto3FieldsBenchmark.java:[line 143]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1570');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.storage.InMemoryStorageBenchmark.benchmarkAccept()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1570" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.storage.InMemoryStorageBenchmark<br/>In method zipkin2.storage.InMemoryStorageBenchmark.benchmarkAccept()<br/>At InMemoryStorageBenchmark.java:[line 91]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1698');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesByIds()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1698" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>In method zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesByIds()<br/>At StrictTraceIdBenchmark.java:[line 158]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1710');">
+            <td>
+               <span class="priority-3">JMHIGRET</span>
+            </td>
+            <td>Method return not used or consumed in zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesIfClashOnLowerTraceId()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1710" style="display: none;">
+                  <a href="#JMH_IGNORED_METHOD_RETURN">Bug type JMH_IGNORED_METHOD_RETURN (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>In method zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesIfClashOnLowerTraceId()<br/>At StrictTraceIdBenchmark.java:[line 171]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e440');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.ElasticsearchVersionBenchmark.parseVersion()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e440" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.ElasticsearchVersionBenchmark<br/>In method zipkin2.elasticsearch.ElasticsearchVersionBenchmark.parseVersion()<br/>At ElasticsearchVersionBenchmark.java:[line 72]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e668');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCheckStartObjectFalse(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e668" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCheckStartObjectFalse(Blackhole)<br/>At JsonReadersBenchmark.java:[line 105]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e680');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCheckStartObjectFalse(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e680" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCheckStartObjectFalse(Blackhole)<br/>At JsonReadersBenchmark.java:[line 108]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e692');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCheckStartObjectTrue(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e692" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCheckStartObjectTrue(Blackhole)<br/>At JsonReadersBenchmark.java:[line 97]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e704');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCheckStartObjectTrue(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e704" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCheckStartObjectTrue(Blackhole)<br/>At JsonReadersBenchmark.java:[line 100]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e716');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCollectValuesNamed(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e716" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCollectValuesNamed(Blackhole)<br/>At JsonReadersBenchmark.java:[line 89]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e728');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCollectValuesNamed(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e728" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkCollectValuesNamed(Blackhole)<br/>At JsonReadersBenchmark.java:[line 92]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e740');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkEnterPathDouble(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e740" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkEnterPathDouble(Blackhole)<br/>At JsonReadersBenchmark.java:[line 81]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e752');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkEnterPathDouble(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e752" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkEnterPathDouble(Blackhole)<br/>At JsonReadersBenchmark.java:[line 84]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e764');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkEnterPathSingle(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e764" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkEnterPathSingle(Blackhole)<br/>At JsonReadersBenchmark.java:[line 73]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e776');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkEnterPathSingle(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e776" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonReadersBenchmark.benchmarkEnterPathSingle(Blackhole)<br/>At JsonReadersBenchmark.java:[line 76]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e842');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseDependencyLink(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e842" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonSerializersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseDependencyLink(Blackhole)<br/>At JsonSerializersBenchmark.java:[line 49]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e854');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseDependencyLink(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e854" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonSerializersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseDependencyLink(Blackhole)<br/>At JsonSerializersBenchmark.java:[line 53]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e866');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseSpan(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e866" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonSerializersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseSpan(Blackhole)<br/>At JsonSerializersBenchmark.java:[line 35]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e878');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseSpan(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e878" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonSerializersBenchmark<br/>In method zipkin2.elasticsearch.internal.JsonSerializersBenchmark.parseSpan(Blackhole)<br/>At JsonSerializersBenchmark.java:[line 39]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1254');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.internal.ThriftCodecBenchmark.benchmarkWriteList()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1254" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.internal.ThriftCodecBenchmark<br/>In method zipkin2.internal.ThriftCodecBenchmark.benchmarkWriteList()<br/>At ThriftCodecBenchmark.java:[line 148]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1723');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesByIds()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1723" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>In method zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesByIds()<br/>At StrictTraceIdBenchmark.java:[line 159]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1735');">
+            <td>
+               <span class="priority-2">JMHLOOP</span>
+            </td>
+            <td>Usage of loops in the benchmark zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesIfClashOnLowerTraceId()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1735" style="display: none;">
+                  <a href="#JMH_LOOP_INSIDE_BENCHMARK">Bug type JMH_LOOP_INSIDE_BENCHMARK (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>In method zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesIfClashOnLowerTraceId()<br/>At StrictTraceIdBenchmark.java:[line 172]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e298');">
+            <td>
+               <span class="priority-3">JMHSFSP</span>
+            </td>
+            <td>Static field declared final in zipkin2.codec.DependencyLinkBytesDecoderBenchmark.LIST_SIZE</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e298" style="display: none;">
+                  <a href="#JMH_STATE_FINAL_STATIC_PRIMITIVE">Bug type JMH_STATE_FINAL_STATIC_PRIMITIVE (click for details)</a>
+                  <br/>In class zipkin2.codec.DependencyLinkBytesDecoderBenchmark<br/>Field zipkin2.codec.DependencyLinkBytesDecoderBenchmark.LIST_SIZE<br/>In DependencyLinkBytesDecoderBenchmark.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e452');">
+            <td>
+               <span class="priority-3">JMHSFSP</span>
+            </td>
+            <td>Static field declared final in zipkin2.elasticsearch.ElasticsearchVersionBenchmark.SAMPLE_JSON</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e452" style="display: none;">
+                  <a href="#JMH_STATE_FINAL_STATIC_PRIMITIVE">Bug type JMH_STATE_FINAL_STATIC_PRIMITIVE (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.ElasticsearchVersionBenchmark<br/>Field zipkin2.elasticsearch.ElasticsearchVersionBenchmark.SAMPLE_JSON<br/>In ElasticsearchVersionBenchmark.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e789');">
+            <td>
+               <span class="priority-3">JMHSFSP</span>
+            </td>
+            <td>Static field declared final in zipkin2.elasticsearch.internal.JsonReadersBenchmark.SAMPLE_JSON</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e789" style="display: none;">
+                  <a href="#JMH_STATE_FINAL_STATIC_PRIMITIVE">Bug type JMH_STATE_FINAL_STATIC_PRIMITIVE (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>Field zipkin2.elasticsearch.internal.JsonReadersBenchmark.SAMPLE_JSON<br/>In JsonReadersBenchmark.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e979');">
+            <td>
+               <span class="priority-3">JMHSFSP</span>
+            </td>
+            <td>Static field declared final in zipkin2.internal.DependenciesBenchmark.LINK_COUNT</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e979" style="display: none;">
+                  <a href="#JMH_STATE_FINAL_STATIC_PRIMITIVE">Bug type JMH_STATE_FINAL_STATIC_PRIMITIVE (click for details)</a>
+                  <br/>In class zipkin2.internal.DependenciesBenchmark<br/>Field zipkin2.internal.DependenciesBenchmark.LINK_COUNT<br/>In DependenciesBenchmark.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1346');">
+            <td>
+               <span class="priority-3">JMHSFSP</span>
+            </td>
+            <td>Static field declared final in zipkin2.internal.V1JsonSpanReaderBenchmark.LIST_SIZE</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1346" style="display: none;">
+                  <a href="#JMH_STATE_FINAL_STATIC_PRIMITIVE">Bug type JMH_STATE_FINAL_STATIC_PRIMITIVE (click for details)</a>
+                  <br/>In class zipkin2.internal.V1JsonSpanReaderBenchmark<br/>Field zipkin2.internal.V1JsonSpanReaderBenchmark.LIST_SIZE<br/>In V1JsonSpanReaderBenchmark.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1359');">
+            <td>
+               <span class="priority-3">JMHSFSP</span>
+            </td>
+            <td>Static field declared final in zipkin2.internal.V1JsonSpanReaderBenchmark.SINGLE_SPAN_JSON</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1359" style="display: none;">
+                  <a href="#JMH_STATE_FINAL_STATIC_PRIMITIVE">Bug type JMH_STATE_FINAL_STATIC_PRIMITIVE (click for details)</a>
+                  <br/>In class zipkin2.internal.V1JsonSpanReaderBenchmark<br/>Field zipkin2.internal.V1JsonSpanReaderBenchmark.SINGLE_SPAN_JSON<br/>In V1JsonSpanReaderBenchmark.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1449');">
+            <td>
+               <span class="priority-3">JMHSFSP</span>
+            </td>
+            <td>Static field declared final in zipkin2.internal.WriteBufferBenchmark.BUFFER_SIZE</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1449" style="display: none;">
+                  <a href="#JMH_STATE_FINAL_STATIC_PRIMITIVE">Bug type JMH_STATE_FINAL_STATIC_PRIMITIVE (click for details)</a>
+                  <br/>In class zipkin2.internal.WriteBufferBenchmark<br/>Field zipkin2.internal.WriteBufferBenchmark.BUFFER_SIZE<br/>In WriteBufferBenchmark.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e144');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.SpanBenchmark.buildSpan() </td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e144" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.SpanBenchmark<br/>In method zipkin2.SpanBenchmark.buildSpan()<br/>At SpanBenchmark.java:[lines 97-100]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e494');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.elasticsearch.internal.BulkCallBuilderBenchmark.serializeBulkPayload() </td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e494" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.BulkCallBuilderBenchmark<br/>In method zipkin2.elasticsearch.internal.BulkCallBuilderBenchmark.serializeBulkPayload()<br/>At BulkCallBuilderBenchmark.java:[lines 97-100]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e890');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.internal.DelayLimiterBenchmark.invalidate(Blackhole) </td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e890" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.internal.DelayLimiterBenchmark<br/>In method zipkin2.internal.DelayLimiterBenchmark.invalidate(Blackhole)<br/>At DelayLimiterBenchmark.java:[lines 112-116]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e902');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.internal.DelayLimiterBenchmark.shouldInvoke(Blackhole) </td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e902" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.internal.DelayLimiterBenchmark<br/>In method zipkin2.internal.DelayLimiterBenchmark.shouldInvoke(Blackhole)<br/>At DelayLimiterBenchmark.java:[lines 98-102]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1097');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.internal.JsonEscaperBenchmark.utf8SizeInBytes(JsonEscaperBenchmark$BenchmarkState, Blackhole) </td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1097" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.internal.JsonEscaperBenchmark<br/>In method zipkin2.internal.JsonEscaperBenchmark.utf8SizeInBytes(JsonEscaperBenchmark$BenchmarkState, Blackhole)<br/>At JsonEscaperBenchmark.java:[lines 166-168]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1242');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.internal.SpanNodeBenchmark.buildTree() </td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1242" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.internal.SpanNodeBenchmark<br/>In method zipkin2.internal.SpanNodeBenchmark.buildTree()<br/>At SpanNodeBenchmark.java:[lines 52-53]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1582');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.storage.InMemoryStorageBenchmark.benchmarkAccept() </td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1582" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.storage.InMemoryStorageBenchmark<br/>In method zipkin2.storage.InMemoryStorageBenchmark.benchmarkAccept()<br/>At InMemoryStorageBenchmark.java:[lines 89-92]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1594');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.storage.InMemoryStorageBenchmark.benchmarkGetServiceNames() </td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1594" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.storage.InMemoryStorageBenchmark<br/>In method zipkin2.storage.InMemoryStorageBenchmark.benchmarkGetServiceNames()<br/>At InMemoryStorageBenchmark.java:[lines 108-109]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1606');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.storage.InMemoryStorageBenchmark.benchmarkGetTrace() </td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1606" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.storage.InMemoryStorageBenchmark<br/>In method zipkin2.storage.InMemoryStorageBenchmark.benchmarkGetTrace()<br/>At InMemoryStorageBenchmark.java:[lines 99-100]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1747');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.storage.StrictTraceIdBenchmark.benchFilterSpans() </td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1747" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>In method zipkin2.storage.StrictTraceIdBenchmark.benchFilterSpans()<br/>At StrictTraceIdBenchmark.java:[lines 145-147]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1759');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesByIds() </td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1759" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>In method zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesByIds()<br/>At StrictTraceIdBenchmark.java:[lines 155-160]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1771');">
+            <td>
+               <span class="priority-1">JMHUNSINKED</span>
+            </td>
+            <td>Unsinked variable inside benchmark method zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesIfClashOnLowerTraceId() </td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1771" style="display: none;">
+                  <a href="#JMH_UNSINKED_VARIABLE">Bug type JMH_UNSINKED_VARIABLE (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>In method zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesIfClashOnLowerTraceId()<br/>At StrictTraceIdBenchmark.java:[lines 168-173]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e270');">
+            <td>
+               <span class="priority-2">EI</span>
+            </td>
+            <td>zipkin2.codec.DependencyLinkBytesDecoderBenchmark.decodeList() may expose internal representation by returning DependencyLinkBytesDecoderBenchmark.decodeListResult</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e270" style="display: none;">
+                  <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+                  <br/>In class zipkin2.codec.DependencyLinkBytesDecoderBenchmark<br/>In method zipkin2.codec.DependencyLinkBytesDecoderBenchmark.decodeList()<br/>Field zipkin2.codec.DependencyLinkBytesDecoderBenchmark.decodeListResult<br/>At DependencyLinkBytesDecoderBenchmark.java:[line 127]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_PERFORMANCE">Performance Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e24');">
+            <td>
+               <span class="priority-3">SIC</span>
+            </td>
+            <td>The class zipkin2.CallBenchmark$1 could be refactored into a named _static_ inner class</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e24" style="display: none;">
+                  <a href="#SIC_INNER_SHOULD_BE_STATIC_ANON">Bug type SIC_INNER_SHOULD_BE_STATIC_ANON (click for details)</a>
+                  <br/>Anonymous class zipkin2.CallBenchmark$1<br/>In class zipkin2.CallBenchmark<br/>In method zipkin2.CallBenchmark.setUp()<br/>At CallBenchmark.java:[line 36]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e328');">
+            <td>
+               <span class="priority-3">SIC</span>
+            </td>
+            <td>The class zipkin2.collector.CollectorBenchmark$1 could be refactored into a named _static_ inner class</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e328" style="display: none;">
+                  <a href="#SIC_INNER_SHOULD_BE_STATIC_ANON">Bug type SIC_INNER_SHOULD_BE_STATIC_ANON (click for details)</a>
+                  <br/>Anonymous class zipkin2.collector.CollectorBenchmark$1<br/>In class zipkin2.collector.CollectorBenchmark<br/>In method zipkin2.collector.CollectorBenchmark.setUp()<br/>At CollectorBenchmark.java:[line 82]<br/>Field zipkin2.collector.CollectorBenchmark.noopCallback</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e396');">
+            <td>
+               <span class="priority-3">SIC</span>
+            </td>
+            <td>The class zipkin2.collector.CollectorBenchmark$NoopStorage$1 could be refactored into a named _static_ inner class</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e396" style="display: none;">
+                  <a href="#SIC_INNER_SHOULD_BE_STATIC_ANON">Bug type SIC_INNER_SHOULD_BE_STATIC_ANON (click for details)</a>
+                  <br/>Anonymous class zipkin2.collector.CollectorBenchmark$NoopStorage$1<br/>In class zipkin2.collector.CollectorBenchmark$NoopStorage<br/>In method zipkin2.collector.CollectorBenchmark$NoopStorage.lambda$spanConsumer$0(List)<br/>At CollectorBenchmark.java:[line 45]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1036');">
+            <td>
+               <span class="priority-3">UrF</span>
+            </td>
+            <td>Unread field: zipkin2.internal.DependencyLinkerBenchmark.links</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1036" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class zipkin2.internal.DependencyLinkerBenchmark<br/>Field zipkin2.internal.DependencyLinkerBenchmark.links<br/>At DependencyLinkerBenchmark.java:[line 67]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1524');">
+            <td>
+               <span class="priority-2">UrF</span>
+            </td>
+            <td>Unread field: zipkin2.server.internal.ZipkinQueryApiV2Benchmark.api</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1524" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class zipkin2.server.internal.ZipkinQueryApiV2Benchmark<br/>Field zipkin2.server.internal.ZipkinQueryApiV2Benchmark.api<br/>At ZipkinQueryApiV2Benchmark.java:[line 56]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_STYLE">Dodgy code Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1666');">
+            <td>
+               <span class="priority-3">ICAST</span>
+            </td>
+            <td>Result of integer multiplication cast to long in zipkin2.storage.QueryRequestBenchmark.setUp()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1666" style="display: none;">
+                  <a href="#ICAST_INTEGER_MULTIPLY_CAST_TO_LONG">Bug type ICAST_INTEGER_MULTIPLY_CAST_TO_LONG (click for details)</a>
+                  <br/>In class zipkin2.storage.QueryRequestBenchmark<br/>In method zipkin2.storage.QueryRequestBenchmark.setUp()<br/>At QueryRequestBenchmark.java:[line 61]<br/>Another occurrence at QueryRequestBenchmark.java:[line 65]<br/>Another occurrence at QueryRequestBenchmark.java:[line 66]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1943');">
+            <td>
+               <span class="priority-3">NP</span>
+            </td>
+            <td>Load of known null value in zipkin2.v1.V1SpanConverterBenchmark.createSampleV1Span()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1943" style="display: none;">
+                  <a href="#NP_LOAD_OF_KNOWN_NULL_VALUE">Bug type NP_LOAD_OF_KNOWN_NULL_VALUE (click for details)</a>
+                  <br/>In class zipkin2.v1.V1SpanConverterBenchmark<br/>In method zipkin2.v1.V1SpanConverterBenchmark.createSampleV1Span()<br/>Value loaded from parentId<br/>At V1SpanConverterBenchmark.java:[line 97]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1957');">
+            <td>
+               <span class="priority-2">RCN</span>
+            </td>
+            <td>Redundant nullcheck of parentId which is known to be null in zipkin2.v1.V1SpanConverterBenchmark.createSampleV1Span()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1957" style="display: none;">
+                  <a href="#RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE (click for details)</a>
+                  <br/>In class zipkin2.v1.V1SpanConverterBenchmark<br/>In method zipkin2.v1.V1SpanConverterBenchmark.createSampleV1Span()<br/>Value loaded from parentId<br/>Redundant null check at V1SpanConverterBenchmark.java:[line 97]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1987');">
+            <td>
+               <span class="priority-2">UC</span>
+            </td>
+            <td>Useless object stored in variable tags of method zipkin2.v1.V2SpanConverterBenchmark.setUp()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1987" style="display: none;">
+                  <a href="#UC_USELESS_OBJECT">Bug type UC_USELESS_OBJECT (click for details)</a>
+                  <br/>In class zipkin2.v1.V2SpanConverterBenchmark<br/>In method zipkin2.v1.V2SpanConverterBenchmark.setUp()<br/>Value tags<br/>Type java.util.HashMap<br/>At V2SpanConverterBenchmark.java:[line 58]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e40');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>CallBenchmark.constantCall not initialized in constructor and dereferenced in zipkin2.CallBenchmark.baselineConstant()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e40" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.CallBenchmark<br/>Field zipkin2.CallBenchmark.constantCall<br/>In method zipkin2.CallBenchmark.baselineConstant()<br/>At CallBenchmark.java:[line 65]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e56');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>CallBenchmark.errorHandlingCall not initialized in constructor and dereferenced in zipkin2.CallBenchmark.baselineErrorHandlingSuccess()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e56" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.CallBenchmark<br/>Field zipkin2.CallBenchmark.errorHandlingCall<br/>In method zipkin2.CallBenchmark.baselineErrorHandlingSuccess()<br/>At CallBenchmark.java:[line 80]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e72');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>CallBenchmark.failingCallPrototype not initialized in constructor and dereferenced in zipkin2.CallBenchmark.baselineErrorHandlingFailure()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e72" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.CallBenchmark<br/>Field zipkin2.CallBenchmark.failingCallPrototype<br/>In method zipkin2.CallBenchmark.baselineErrorHandlingFailure()<br/>At CallBenchmark.java:[line 85]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e88');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>CallBenchmark.flatMappingCall not initialized in constructor and dereferenced in zipkin2.CallBenchmark.baselineFlatMapping()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e88" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.CallBenchmark<br/>Field zipkin2.CallBenchmark.flatMappingCall<br/>In method zipkin2.CallBenchmark.baselineFlatMapping()<br/>At CallBenchmark.java:[line 75]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e104');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>CallBenchmark.mappingCall not initialized in constructor and dereferenced in zipkin2.CallBenchmark.baselineMapping()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e104" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.CallBenchmark<br/>Field zipkin2.CallBenchmark.mappingCall<br/>In method zipkin2.CallBenchmark.baselineMapping()<br/>At CallBenchmark.java:[line 70]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e157');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>SpanBenchmark.builder not initialized in constructor and dereferenced in zipkin2.SpanBenchmark.buildSpan()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e157" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.SpanBenchmark<br/>Field zipkin2.SpanBenchmark.builder<br/>In method zipkin2.SpanBenchmark.buildSpan()<br/>At SpanBenchmark.java:[line 97]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e173');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>SpanBenchmark.prebuiltSpan not initialized in constructor and dereferenced in zipkin2.SpanBenchmark.encodeJson()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e173" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.SpanBenchmark<br/>Field zipkin2.SpanBenchmark.prebuiltSpan<br/>In method zipkin2.SpanBenchmark.encodeJson()<br/>At SpanBenchmark.java:[line 109]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e206');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>SpanBytesDecoderDetectorBenchmark.jsonV1 not initialized in constructor and dereferenced in zipkin2.SpanBytesDecoderDetectorBenchmark.detectJsonV1(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e206" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.SpanBytesDecoderDetectorBenchmark<br/>Field zipkin2.SpanBytesDecoderDetectorBenchmark.jsonV1<br/>In method zipkin2.SpanBytesDecoderDetectorBenchmark.detectJsonV1(Blackhole)<br/>At SpanBytesDecoderDetectorBenchmark.java:[line 79]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e222');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>SpanBytesDecoderDetectorBenchmark.jsonV2 not initialized in constructor and dereferenced in zipkin2.SpanBytesDecoderDetectorBenchmark.detectJsonV2(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e222" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.SpanBytesDecoderDetectorBenchmark<br/>Field zipkin2.SpanBytesDecoderDetectorBenchmark.jsonV2<br/>In method zipkin2.SpanBytesDecoderDetectorBenchmark.detectJsonV2(Blackhole)<br/>At SpanBytesDecoderDetectorBenchmark.java:[line 85]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e238');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>SpanBytesDecoderDetectorBenchmark.proto3 not initialized in constructor and dereferenced in zipkin2.SpanBytesDecoderDetectorBenchmark.detectProto3(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e238" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.SpanBytesDecoderDetectorBenchmark<br/>Field zipkin2.SpanBytesDecoderDetectorBenchmark.proto3<br/>In method zipkin2.SpanBytesDecoderDetectorBenchmark.detectProto3(Blackhole)<br/>At SpanBytesDecoderDetectorBenchmark.java:[line 97]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e254');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>SpanBytesDecoderDetectorBenchmark.thrift not initialized in constructor and dereferenced in zipkin2.SpanBytesDecoderDetectorBenchmark.detectThrift(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e254" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.SpanBytesDecoderDetectorBenchmark<br/>Field zipkin2.SpanBytesDecoderDetectorBenchmark.thrift<br/>In method zipkin2.SpanBytesDecoderDetectorBenchmark.detectThrift(Blackhole)<br/>At SpanBytesDecoderDetectorBenchmark.java:[line 91]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e311');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>DependencyLinkBytesDecoderBenchmark.decodeListResult not initialized in constructor and dereferenced in zipkin2.codec.DependencyLinkBytesDecoderBenchmark.decodeList()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e311" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.codec.DependencyLinkBytesDecoderBenchmark<br/>Field zipkin2.codec.DependencyLinkBytesDecoderBenchmark.decodeListResult<br/>In method zipkin2.codec.DependencyLinkBytesDecoderBenchmark.decodeList()<br/>At DependencyLinkBytesDecoderBenchmark.java:[line 124]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e348');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>CollectorBenchmark.collector not initialized in constructor and dereferenced in zipkin2.collector.CollectorBenchmark.accept(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e348" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.collector.CollectorBenchmark<br/>Field zipkin2.collector.CollectorBenchmark.collector<br/>In method zipkin2.collector.CollectorBenchmark.accept(Blackhole)<br/>At CollectorBenchmark.java:[line 101]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e364');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>CollectorBenchmark.collector not initialized in constructor and dereferenced in zipkin2.collector.CollectorBenchmark.acceptSpansFromBytes(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e364" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.collector.CollectorBenchmark<br/>Field zipkin2.collector.CollectorBenchmark.collector<br/>In method zipkin2.collector.CollectorBenchmark.acceptSpansFromBytes(Blackhole)<br/>At CollectorBenchmark.java:[line 109]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e380');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>CollectorBenchmark.collector not initialized in constructor and dereferenced in zipkin2.collector.CollectorBenchmark.sample(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e380" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.collector.CollectorBenchmark<br/>Field zipkin2.collector.CollectorBenchmark.collector<br/>In method zipkin2.collector.CollectorBenchmark.sample(Blackhole)<br/>At CollectorBenchmark.java:[line 93]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e424');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>CollectorSamplerBenchmark$BenchmarkState.sampler not initialized in constructor and dereferenced in zipkin2.collector.CollectorSamplerBenchmark.isSampledThroughput(CollectorSamplerBenchmark$BenchmarkState, Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e424" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.collector.CollectorSamplerBenchmark$BenchmarkState<br/>Field zipkin2.collector.CollectorSamplerBenchmark$BenchmarkState.sampler<br/>In method zipkin2.collector.CollectorSamplerBenchmark.isSampledThroughput(CollectorSamplerBenchmark$BenchmarkState, Blackhole)<br/>At CollectorSamplerBenchmark.java:[line 91]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e465');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>ElasticsearchVersionBenchmark.jsonFactory not initialized in constructor and dereferenced in zipkin2.elasticsearch.ElasticsearchVersionBenchmark.parseVersion()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e465" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.ElasticsearchVersionBenchmark<br/>Field zipkin2.elasticsearch.ElasticsearchVersionBenchmark.jsonFactory<br/>In method zipkin2.elasticsearch.ElasticsearchVersionBenchmark.parseVersion()<br/>At ElasticsearchVersionBenchmark.java:[line 72]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e571');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>BulkIndexWriterBenchmark.writerDisabled not initialized in constructor and dereferenced in zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.writeSpanWithoutSearch(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e571" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark<br/>Field zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.writerDisabled<br/>In method zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.writeSpanWithoutSearch(Blackhole)<br/>At BulkIndexWriterBenchmark.java:[line 96]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e587');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>BulkIndexWriterBenchmark.writerEnabled not initialized in constructor and dereferenced in zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.md5Hashing(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e587" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark<br/>Field zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.writerEnabled<br/>In method zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.md5Hashing(Blackhole)<br/>At BulkIndexWriterBenchmark.java:[line 103]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e603');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>BulkIndexWriterBenchmark.writerEnabled not initialized in constructor and dereferenced in zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.writeSpanWithSearch(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e603" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark<br/>Field zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.writerEnabled<br/>In method zipkin2.elasticsearch.internal.BulkIndexWriterBenchmark.writeSpanWithSearch(Blackhole)<br/>At BulkIndexWriterBenchmark.java:[line 89]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e619');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>IndexNameFormatterBenchmark.formatter not initialized in constructor and dereferenced in zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark.benchFormatTypeAndRange()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e619" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark<br/>Field zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark.formatter<br/>In method zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark.benchFormatTypeAndRange()<br/>At IndexNameFormatterBenchmark.java:[line 70]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e635');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>IndexNameFormatterBenchmark.formatter not initialized in constructor and dereferenced in zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark.benchFormatTypeAndTimestamp()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e635" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark<br/>Field zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark.formatter<br/>In method zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark.benchFormatTypeAndTimestamp()<br/>At IndexNameFormatterBenchmark.java:[line 80]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e652');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>IndexNameFormatterBenchmark.formatter not initialized in constructor and dereferenced in zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark.benchFormatTypeAndTimestampForInsert()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e652" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark<br/>Field zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark.formatter<br/>In method zipkin2.elasticsearch.internal.IndexNameFormatterBenchmark.benchFormatTypeAndTimestampForInsert()<br/>At IndexNameFormatterBenchmark.java:[line 90]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e802');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>JsonReadersBenchmark.factory not initialized in constructor and dereferenced in zipkin2.elasticsearch.internal.JsonReadersBenchmark.newParser()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e802" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.elasticsearch.internal.JsonReadersBenchmark<br/>Field zipkin2.elasticsearch.internal.JsonReadersBenchmark.factory<br/>In method zipkin2.elasticsearch.internal.JsonReadersBenchmark.newParser()<br/>At JsonReadersBenchmark.java:[line 65]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e914');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>DelayLimiterBenchmark.keys not initialized in constructor and dereferenced in zipkin2.internal.DelayLimiterBenchmark.invalidate(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e914" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.DelayLimiterBenchmark<br/>Field zipkin2.internal.DelayLimiterBenchmark.keys<br/>In method zipkin2.internal.DelayLimiterBenchmark.invalidate(Blackhole)<br/>At DelayLimiterBenchmark.java:[line 113]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e931');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>DelayLimiterBenchmark.keys not initialized in constructor and dereferenced in zipkin2.internal.DelayLimiterBenchmark.shouldInvoke(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e931" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.DelayLimiterBenchmark<br/>Field zipkin2.internal.DelayLimiterBenchmark.keys<br/>In method zipkin2.internal.DelayLimiterBenchmark.shouldInvoke(Blackhole)<br/>At DelayLimiterBenchmark.java:[line 99]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e947');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>DelayLimiterBenchmark.limiter not initialized in constructor and dereferenced in zipkin2.internal.DelayLimiterBenchmark.invalidate(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e947" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.DelayLimiterBenchmark<br/>Field zipkin2.internal.DelayLimiterBenchmark.limiter<br/>In method zipkin2.internal.DelayLimiterBenchmark.invalidate(Blackhole)<br/>At DelayLimiterBenchmark.java:[line 114]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e963');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>DelayLimiterBenchmark.limiter not initialized in constructor and dereferenced in zipkin2.internal.DelayLimiterBenchmark.shouldInvoke(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e963" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.DelayLimiterBenchmark<br/>Field zipkin2.internal.DelayLimiterBenchmark.limiter<br/>In method zipkin2.internal.DelayLimiterBenchmark.shouldInvoke(Blackhole)<br/>At DelayLimiterBenchmark.java:[line 100]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e992');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>DependenciesBenchmark.dependencies not initialized in constructor and dereferenced in zipkin2.internal.DependenciesBenchmark.serialize()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e992" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.DependenciesBenchmark<br/>Field zipkin2.internal.DependenciesBenchmark.dependencies<br/>In method zipkin2.internal.DependenciesBenchmark.serialize()<br/>At DependenciesBenchmark.java:[line 95]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1008');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>DependenciesBenchmark.dependencies not initialized in constructor and dereferenced in zipkin2.internal.DependenciesBenchmark.sizeInBytes()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1008" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.DependenciesBenchmark<br/>Field zipkin2.internal.DependenciesBenchmark.dependencies<br/>In method zipkin2.internal.DependenciesBenchmark.sizeInBytes()<br/>At DependenciesBenchmark.java:[line 113]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1049');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>DependencyLinkerBenchmark.linker not initialized in constructor and dereferenced in zipkin2.internal.DependencyLinkerBenchmark.benchmarkLink()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1049" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.DependencyLinkerBenchmark<br/>Field zipkin2.internal.DependencyLinkerBenchmark.linker<br/>In method zipkin2.internal.DependencyLinkerBenchmark.benchmarkLink()<br/>At DependencyLinkerBenchmark.java:[line 79]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1080');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>JsonCodecBenchmark.payloadList not initialized in constructor and dereferenced in zipkin2.internal.JsonCodecBenchmark.readList()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1080" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.JsonCodecBenchmark<br/>Field zipkin2.internal.JsonCodecBenchmark.payloadList<br/>In method zipkin2.internal.JsonCodecBenchmark.readList()<br/>At JsonCodecBenchmark.java:[line 151]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1109');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>JsonEscaperBenchmark$BenchmarkState.input not initialized in constructor and dereferenced in zipkin2.internal.JsonEscaperBenchmark.utf8SizeInBytes(JsonEscaperBenchmark$BenchmarkState, Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1109" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.JsonEscaperBenchmark$BenchmarkState<br/>Field zipkin2.internal.JsonEscaperBenchmark$BenchmarkState.input<br/>In method zipkin2.internal.JsonEscaperBenchmark.utf8SizeInBytes(JsonEscaperBenchmark$BenchmarkState, Blackhole)<br/>At JsonEscaperBenchmark.java:[line 166]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1209');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>Proto3ZipkinFieldsBenchmark.serializedSpan not initialized in constructor and dereferenced in zipkin2.internal.Proto3ZipkinFieldsBenchmark.deserializeSpan(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1209" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.Proto3ZipkinFieldsBenchmark<br/>Field zipkin2.internal.Proto3ZipkinFieldsBenchmark.serializedSpan<br/>In method zipkin2.internal.Proto3ZipkinFieldsBenchmark.deserializeSpan(Blackhole)<br/>At Proto3ZipkinFieldsBenchmark.java:[line 104]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1225');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>ReadBufferBenchmark$ByteBufferState.bb not initialized in constructor and dereferenced in zipkin2.internal.ReadBufferBenchmark$ByteBufferState.reset()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1225" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.ReadBufferBenchmark$ByteBufferState<br/>Field zipkin2.internal.ReadBufferBenchmark$ByteBufferState.bb<br/>In method zipkin2.internal.ReadBufferBenchmark$ByteBufferState.reset()<br/>At ReadBufferBenchmark.java:[line 98]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1266');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>ThriftCodecBenchmark.codec not initialized in constructor and dereferenced in zipkin2.internal.ThriftCodecBenchmark.benchmarkSizeInBytes()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1266" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.ThriftCodecBenchmark<br/>Field zipkin2.internal.ThriftCodecBenchmark.codec<br/>In method zipkin2.internal.ThriftCodecBenchmark.benchmarkSizeInBytes()<br/>At ThriftCodecBenchmark.java:[line 131]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1282');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>ThriftCodecBenchmark.codec not initialized in constructor and dereferenced in zipkin2.internal.ThriftCodecBenchmark.benchmarkWriteList()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1282" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.ThriftCodecBenchmark<br/>Field zipkin2.internal.ThriftCodecBenchmark.codec<br/>In method zipkin2.internal.ThriftCodecBenchmark.benchmarkWriteList()<br/>At ThriftCodecBenchmark.java:[line 149]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1298');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>ThriftCodecBenchmark.codec not initialized in constructor and dereferenced in zipkin2.internal.ThriftCodecBenchmark.benchmarkWriteSingle()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1298" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.ThriftCodecBenchmark<br/>Field zipkin2.internal.ThriftCodecBenchmark.codec<br/>In method zipkin2.internal.ThriftCodecBenchmark.benchmarkWriteSingle()<br/>At ThriftCodecBenchmark.java:[line 139]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1314');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>ThriftCodecBenchmark.spanList not initialized in constructor and dereferenced in zipkin2.internal.ThriftCodecBenchmark.benchmarkReadList(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1314" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.ThriftCodecBenchmark<br/>Field zipkin2.internal.ThriftCodecBenchmark.spanList<br/>In method zipkin2.internal.ThriftCodecBenchmark.benchmarkReadList(Blackhole)<br/>At ThriftCodecBenchmark.java:[line 171]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1330');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>ThriftCodecBenchmark.spanList not initialized in constructor and dereferenced in zipkin2.internal.ThriftCodecBenchmark.benchmarkWriteList()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1330" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.ThriftCodecBenchmark<br/>Field zipkin2.internal.ThriftCodecBenchmark.spanList<br/>In method zipkin2.internal.ThriftCodecBenchmark.benchmarkWriteList()<br/>At ThriftCodecBenchmark.java:[line 147]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1372');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>V1JsonSpanReaderBenchmark.outputCollection not initialized in constructor and dereferenced in zipkin2.internal.V1JsonSpanReaderBenchmark.parseSpanList(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1372" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.V1JsonSpanReaderBenchmark<br/>Field zipkin2.internal.V1JsonSpanReaderBenchmark.outputCollection<br/>In method zipkin2.internal.V1JsonSpanReaderBenchmark.parseSpanList(Blackhole)<br/>At V1JsonSpanReaderBenchmark.java:[line 110]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1388');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>V1JsonSpanReaderBenchmark.reader not initialized in constructor and dereferenced in zipkin2.internal.V1JsonSpanReaderBenchmark.parseSingleSpan(Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1388" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.V1JsonSpanReaderBenchmark<br/>Field zipkin2.internal.V1JsonSpanReaderBenchmark.reader<br/>In method zipkin2.internal.V1JsonSpanReaderBenchmark.parseSingleSpan(Blackhole)<br/>At V1JsonSpanReaderBenchmark.java:[line 101]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1405');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>V1JsonSpanReaderBenchmark.reader not initialized in constructor and dereferenced in zipkin2.internal.V1JsonSpanReaderBenchmark.parseSpanList(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1405" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.V1JsonSpanReaderBenchmark<br/>Field zipkin2.internal.V1JsonSpanReaderBenchmark.reader<br/>In method zipkin2.internal.V1JsonSpanReaderBenchmark.parseSpanList(Blackhole)<br/>At V1JsonSpanReaderBenchmark.java:[line 111]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1421');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>V1ThriftSpanReaderBenchmark.reader not initialized in constructor and dereferenced in zipkin2.internal.V1ThriftSpanReaderBenchmark.readSpan()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1421" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.internal.V1ThriftSpanReaderBenchmark<br/>Field zipkin2.internal.V1ThriftSpanReaderBenchmark.reader<br/>In method zipkin2.internal.V1ThriftSpanReaderBenchmark.readSpan()<br/>At V1ThriftSpanReaderBenchmark.java:[line 81]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1492');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>ZipkinHttpCollectorBenchmark.buffer not initialized in constructor and dereferenced in zipkin2.server.internal.ZipkinHttpCollectorBenchmark.benchmarkContains()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1492" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.server.internal.ZipkinHttpCollectorBenchmark<br/>Field zipkin2.server.internal.ZipkinHttpCollectorBenchmark.buffer<br/>In method zipkin2.server.internal.ZipkinHttpCollectorBenchmark.benchmarkContains()<br/>At ZipkinHttpCollectorBenchmark.java:[line 69]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1508');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>ZipkinHttpCollectorBenchmark.buffer not initialized in constructor and dereferenced in zipkin2.server.internal.ZipkinHttpCollectorBenchmark.benchmarkTestForUnexpectedFormat()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1508" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.server.internal.ZipkinHttpCollectorBenchmark<br/>Field zipkin2.server.internal.ZipkinHttpCollectorBenchmark.buffer<br/>In method zipkin2.server.internal.ZipkinHttpCollectorBenchmark.benchmarkTestForUnexpectedFormat()<br/>At ZipkinHttpCollectorBenchmark.java:[line 74]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1537');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>InitialEndpointSupplierBenchmark.supplier not initialized in constructor and dereferenced in zipkin2.server.internal.elasticsearch.InitialEndpointSupplierBenchmark.benchmarkGet(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1537" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.server.internal.elasticsearch.InitialEndpointSupplierBenchmark<br/>Field zipkin2.server.internal.elasticsearch.InitialEndpointSupplierBenchmark.supplier<br/>In method zipkin2.server.internal.elasticsearch.InitialEndpointSupplierBenchmark.benchmarkGet(Blackhole)<br/>At InitialEndpointSupplierBenchmark.java:[line 85]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1553');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>GroupByTraceIdBenchmark.mapper not initialized in constructor and dereferenced in zipkin2.storage.GroupByTraceIdBenchmark.groupByTraceId()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1553" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.storage.GroupByTraceIdBenchmark<br/>Field zipkin2.storage.GroupByTraceIdBenchmark.mapper<br/>In method zipkin2.storage.GroupByTraceIdBenchmark.groupByTraceId()<br/>At GroupByTraceIdBenchmark.java:[line 49]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1618');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>InMemoryStorageBenchmark.storage not initialized in constructor and dereferenced in zipkin2.storage.InMemoryStorageBenchmark.benchmarkAccept()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1618" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.storage.InMemoryStorageBenchmark<br/>Field zipkin2.storage.InMemoryStorageBenchmark.storage<br/>In method zipkin2.storage.InMemoryStorageBenchmark.benchmarkAccept()<br/>At InMemoryStorageBenchmark.java:[line 90]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1634');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>InMemoryStorageBenchmark.storage not initialized in constructor and dereferenced in zipkin2.storage.InMemoryStorageBenchmark.benchmarkGetServiceNames()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1634" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.storage.InMemoryStorageBenchmark<br/>Field zipkin2.storage.InMemoryStorageBenchmark.storage<br/>In method zipkin2.storage.InMemoryStorageBenchmark.benchmarkGetServiceNames()<br/>At InMemoryStorageBenchmark.java:[line 108]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1650');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>InMemoryStorageBenchmark.storage not initialized in constructor and dereferenced in zipkin2.storage.InMemoryStorageBenchmark.benchmarkGetTrace()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1650" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.storage.InMemoryStorageBenchmark<br/>Field zipkin2.storage.InMemoryStorageBenchmark.storage<br/>In method zipkin2.storage.InMemoryStorageBenchmark.benchmarkGetTrace()<br/>At InMemoryStorageBenchmark.java:[line 99]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1682');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>QueryRequestBenchmark.request not initialized in constructor and dereferenced in zipkin2.storage.QueryRequestBenchmark.testQuery()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1682" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.storage.QueryRequestBenchmark<br/>Field zipkin2.storage.QueryRequestBenchmark.request<br/>In method zipkin2.storage.QueryRequestBenchmark.testQuery()<br/>At QueryRequestBenchmark.java:[line 86]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1848');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>StrictTraceIdBenchmark.traces not initialized in constructor and dereferenced in zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesByIds()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1848" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>Field zipkin2.storage.StrictTraceIdBenchmark.traces<br/>In method zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesByIds()<br/>At StrictTraceIdBenchmark.java:[line 156]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1865');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>StrictTraceIdBenchmark.traces not initialized in constructor and dereferenced in zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesIfClashOnLowerTraceId()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1865" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.storage.StrictTraceIdBenchmark<br/>Field zipkin2.storage.StrictTraceIdBenchmark.traces<br/>In method zipkin2.storage.StrictTraceIdBenchmark.benchFilterTracesIfClashOnLowerTraceId()<br/>At StrictTraceIdBenchmark.java:[line 169]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1881');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>AnnotationCodecBenchmark$BenchmarkState.codec not initialized in constructor and dereferenced in zipkin2.storage.cassandra.AnnotationCodecBenchmark.innerToOuter(AnnotationCodecBenchmark$BenchmarkState, Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1881" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.storage.cassandra.AnnotationCodecBenchmark$BenchmarkState<br/>Field zipkin2.storage.cassandra.AnnotationCodecBenchmark$BenchmarkState.codec<br/>In method zipkin2.storage.cassandra.AnnotationCodecBenchmark.innerToOuter(AnnotationCodecBenchmark$BenchmarkState, Blackhole)<br/>At AnnotationCodecBenchmark.java:[line 87]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e1897');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>AnnotationCodecBenchmark$BenchmarkState.codec not initialized in constructor and dereferenced in zipkin2.storage.cassandra.AnnotationCodecBenchmark.outerToInner(AnnotationCodecBenchmark$BenchmarkState, Blackhole)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e1897" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.storage.cassandra.AnnotationCodecBenchmark$BenchmarkState<br/>Field zipkin2.storage.cassandra.AnnotationCodecBenchmark$BenchmarkState.codec<br/>In method zipkin2.storage.cassandra.AnnotationCodecBenchmark.outerToInner(AnnotationCodecBenchmark$BenchmarkState, Blackhole)<br/>At AnnotationCodecBenchmark.java:[line 93]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e1971');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>V1SpanConverterBenchmark.converter not initialized in constructor and dereferenced in zipkin2.v1.V1SpanConverterBenchmark.convertSpan(Blackhole)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e1971" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.v1.V1SpanConverterBenchmark<br/>Field zipkin2.v1.V1SpanConverterBenchmark.converter<br/>In method zipkin2.v1.V1SpanConverterBenchmark.convertSpan(Blackhole)<br/>At V1SpanConverterBenchmark.java:[line 116]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e2005');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>V2SpanConverterBenchmark.converter not initialized in constructor and dereferenced in zipkin2.v1.V2SpanConverterBenchmark.convertSpan()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e2005" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class zipkin2.v1.V2SpanConverterBenchmark<br/>Field zipkin2.v1.V2SpanConverterBenchmark.converter<br/>In method zipkin2.v1.V2SpanConverterBenchmark.convertSpan()<br/>At V2SpanConverterBenchmark.java:[line 70]</p>
+            </td>
+         </tr>
+      </table>
+      <h1>
+         <a name="Details">Details</a>
+      </h1>
+      <h2>
+         <a name="CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE">CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE: Class defines clone() but doesn't implement Cloneable</a>
+      </h2>
+
+<p> This class defines a clone() method but the class doesn't implement Cloneable.
+There are some situations in which this is OK (e.g., you want to control how subclasses
+can clone themselves), but just make sure that this is what you intended.
+</p>
+
+    <h2>
+         <a name="DMI_RANDOM_USED_ONLY_ONCE">DMI_RANDOM_USED_ONLY_ONCE: Random object created and used only once</a>
+      </h2>
+
+<p> This code creates a java.util.Random object, uses it to generate one random number, and then discards
+the Random object. This produces mediocre quality random numbers and is inefficient.
+If possible, rewrite the code so that the Random object is created once and saved, and each time a new random number
+is required invoke a method on the existing Random object to obtain it.
+</p>
+
+<p>If it is important that the generated Random numbers not be guessable, you <em>must</em> not create a new Random for each random
+number; the values are too easily guessable. You should strongly consider using a java.security.SecureRandom instead
+(and avoid allocating a new SecureRandom for each random number needed).
+</p>
+
+    <h2>
+         <a name="DM_DEFAULT_ENCODING">DM_DEFAULT_ENCODING: Reliance on default encoding</a>
+      </h2>
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      <h2>
+         <a name="EI_EXPOSE_REP">EI_EXPOSE_REP: May expose internal representation by returning reference to mutable object</a>
+      </h2>
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    <h2>
+         <a name="ICAST_INTEGER_MULTIPLY_CAST_TO_LONG">ICAST_INTEGER_MULTIPLY_CAST_TO_LONG: Result of integer multiplication cast to long</a>
+      </h2>
+
+<p>
+This code performs integer multiply and then converts the result to a long,
+as in:</p>
+<pre><code>long convertDaysToMilliseconds(int days) { return 1000*3600*24*days; }
+</code></pre>
+<p>
+If the multiplication is done using long arithmetic, you can avoid
+the possibility that the result will overflow. For example, you
+could fix the above code to:</p>
+<pre><code>long convertDaysToMilliseconds(int days) { return 1000L*3600*24*days; }
+</code></pre>
+<p>
+or
+</p>
+<pre><code>static final long MILLISECONDS_PER_DAY = 24L*3600*1000;
+long convertDaysToMilliseconds(int days) { return days * MILLISECONDS_PER_DAY; }
+</code></pre>
+
+    <h2>
+         <a name="JMH_FIXTURE_USING_INVOCATION_SCOPE">JMH_FIXTURE_USING_INVOCATION_SCOPE: Fixture methods configured with Invocation scope. </a>
+      </h2>
+
+<p>
+This level is only usable for benchmarks taking more than a millisecond
+per single Benchmark method invocation. It is a good idea to validate
+the impact for your case on ad-hoc basis as well.
+</p>
+
+		<h2>
+         <a name="JMH_IGNORED_METHOD_RETURN">JMH_IGNORED_METHOD_RETURN: Method return not used or consumed by a Blackhole.</a>
+      </h2>
+
+<p>Each non-void method call should have its return either used in the benchmark or consumed 
+by a Blackhole to avoid	dead-code optimization.</p>
+
+		<h2>
+         <a name="JMH_LOOP_INSIDE_BENCHMARK">JMH_LOOP_INSIDE_BENCHMARK: Usage of loops in the JMH benchmark function.</a>
+      </h2>
+
+<p>Looping is done in the hope of minimizing the overhead of calling the test method, by doing the operations inside
+the loop instead of inside the method call. This is a dangerous setting for a micro-benchmark.
+The compiler can automagically apply some optimizations to merge the loop iterations.</p>
+
+		<h2>
+         <a name="JMH_STATE_FINAL_STATIC_PRIMITIVE">JMH_STATE_FINAL_STATIC_PRIMITIVE: JMH State primitive static field declared final.</a>
+      </h2>
+
+<p>Final primitive fields pose a threat to benchmark measurements
+as it gives the compiler the possibility of applying the
+constant-folding. If JVM realizes the result of the computation is the
+same no matter what, it can cleverly optimize it. In the case of a JMH benchmark, that means
+it can move the computation outside of the internal JMH loop.</p>
+
+    <h2>
+         <a name="JMH_UNSINKED_VARIABLE">JMH_UNSINKED_VARIABLE: Unsinked variable inside benchmark method</a>
+      </h2>
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    <h2>
+         <a name="NP_LOAD_OF_KNOWN_NULL_VALUE">NP_LOAD_OF_KNOWN_NULL_VALUE: Load of known null value</a>
+      </h2>
+
+  <p> The variable referenced at this point is known to be null due to an earlier
+   check against null. Although this is valid, it might be a mistake (perhaps you
+intended to refer to a different variable, or perhaps the earlier check to see if the
+variable is null should have been a check to see if it was non-null).
+</p>
+
+    <h2>
+         <a name="NM_CONFUSING">NM_CONFUSING: Confusing method names</a>
+      </h2>
+
+  <p> The referenced methods have names that differ only by capitalization.</p>
+
+    <h2>
+         <a name="PA_PUBLIC_PRIMITIVE_ATTRIBUTE">PA_PUBLIC_PRIMITIVE_ATTRIBUTE: Primitive field is public</a>
+      </h2>
+      
+    <p>
+    <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ01-J.+Limit+accessibility+of+fields">SEI CERT rule OBJ01-J</a> requires that accessibility to fields must be limited.
+    Otherwise, the values of the fields may be manipulated from outside the class, which may be unexpected or
+    undesired behaviour.
+    In general, requiring that no fields are allowed to be public is overkill and unrealistic. Even
+    the rule mentions that final fields may be public. Besides final fields, there may be other
+    usages for public fields: some public fields may serve as "flags" that affect the behavior of
+    the class. Such flag fields are expected to be read by the current instance (or the current
+    class, in case of static fields), but written by others. If a field is both written by the
+    methods of the current instance (or the current class, in case of static fields) and from the
+    outside, the code is suspicious. Consider making these fields private and provide appropriate
+    setters, if necessary. Please note that constructors, initializers and finalizers are
+    exceptions, if only they write the field inside the class, the field is not considered as
+    written by the class itself.</p>
+    
+    <h2>
+         <a name="RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE">RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE: Redundant nullcheck of value known to be null</a>
+      </h2>
+
+<p> This method contains a redundant check of a known null value against
+the constant null.</p>
+
+    <h2>
+         <a name="SIC_INNER_SHOULD_BE_STATIC_ANON">SIC_INNER_SHOULD_BE_STATIC_ANON: Could be refactored into a named static inner class</a>
+      </h2>
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    <h2>
+         <a name="UC_USELESS_OBJECT">UC_USELESS_OBJECT: Useless object created</a>
+      </h2>
+
+<p>Our analysis shows that this object is useless.
+It's created and modified, but its value never go outside of the method or produce any side-effect.
+Either there is a mistake and object was intended to be used or it can be removed.</p>
+<p>This analysis rarely produces false-positives. Common false-positive cases include:</p>
+<p>- This object used to implicitly throw some obscure exception.</p>
+<p>- This object used as a stub to generalize the code.</p>
+<p>- This object used to hold strong references to weak/soft-referenced objects.</p>
+
+    <h2>
+         <a name="URF_UNREAD_FIELD">URF_UNREAD_FIELD: Unread field</a>
+      </h2>
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    <h2>
+         <a name="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR: Field not initialized in constructor but dereferenced without null check</a>
+      </h2>
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    </body>
+</html>
